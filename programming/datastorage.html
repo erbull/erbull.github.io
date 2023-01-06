@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+    <div id="nav-menu"></div>
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h3 font-weight-bold text-center mb-4" style="color: orange;">BİLGİSAYARLARDA VERİ SAKLAMA</p>            
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">GİRİŞ</p>
+            <p>
+                Bilgisayarların dünyasında bizim kullandığımız onluk sayı sisteminin yeri olmadığını emini hepimiz biliyoruz. Bilgisayarlar, elektronik yapısını oluşturan milyonlarca transistörün açık ya da kapalı olduuğunu gösteren 0 ve 1 lerden oluşan ikilik sayı sıstemini kullanırlar. Bu durum, verilerin diske ya da belleğe kaydedilmesi veya okunması için de geçerlidir.
+            </p>
+            <p>
+                Günlük hayatta kullandığımız onlu sayı sistemindeki sayıların, 2 tabanında yazılmasıyla elde edilen sisteme İkili Sayı Sistemi adı verilir. Bu sistemdeki tüm sayılar, 0 ve 1 rakamlarının kullanımıyla ifade edilir. Örneğin onlu sistemdeki 45 sayısı, ikili sistemde 101101 sayısına karşılık gelir ve matematiksel olarak (45)10 = (101101)2 şeklinde gösterilir.
+            </p>
+            <p>
+                Günümüzde kullanılan ikili sayı sistemi, 1679 yılında Alman filozof Gottfried Wilhelm von Leibniz tarafından ortaya konulmuştur. İkili sayı sistemine benzerlik gösteren sistemlerin varlığı, eski Mısır, Çin ve Hindistan uygarlıklarına kadar dayanmaktadır. 
+            </p>      
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col">
+                <p style="color: orange; font-weight: bold;">Onlu Sayı Sisteminden İkili Sayı Sistemine Dönüşüm</p>
+                <p>
+                    Onlu sayı sisteminde ifade edilmiş bir sayının ikili sayı sistemine çevrilmesi için 2’ye bölme işlemi uygulanır. Bölümün değeri 2’den az olana kadar, bölme işlemine devam edilir. Kalan değerlerinin tersten yazılmasıyla ikili sayı sistemindeki gösterim elde edilir. 
+                </p>              
+            </div>
+            <div class="col-12 col-md-6 pb-3">
+                <img src="../img/binary.png"/>
+            </div>   
+        </div> 
+
+        <div class="row align-items-center"> 
+            <p style="color: orange; font-weight: bold;">İkili Sayı Sisteminden Onlu Sayı Sistemine Dönüşüm</p>            
+            <div class="col-12 col-md-6 pb-3">
+                <img src="../img/decimal.png"/>
+            </div>            
+            <div class="col">
+                <p>
+                    İkili sayı sisteminde ifade edilmiş bir sayının onlu sayı sistemine çevrilmesi için her basamak 2’nin kuvveti ile çarpılır. Çarpma işlemi en sağ basamaktan ve 20 ile başlar. Her basamak geçişinde kuvvet 1 arttırılır. Çarpımlar sonucunda elde edilen değerler toplanarak onlu sayı sistemindeki sayı elde edilir.
+                </p>             
+            </div>       
+        </div>
+
+        <div class="row align-items-center pt-5 mt-5">
+            <p style="color: orange; font-weight: bold;">BİLGİSAYARDA DİJİTAL VERİNİN SAKLANMASI</p>
+            <div class="col-12 col-lg-6">
+                <p>
+                    Dijital elektronikte 1 değeri akımın varlığını, 0 değeri ise akımın yokluğunu temsil eder. Bir bilgisayarın farklı kısımları arasında iletişim kurulması da akım seviyesinin takibiyle sağlanır. Belirli zaman aralıklarında akım seviyesi dinlenerek, 1 ve 0 değerlerinden oluşan mesajlar ile haberleşilir.
+                </p>
+                <p>
+                    <i><b>Bit: </b>Dijital verinin en küçük ve temel ünitesidir. Bir bit, yalnızca 0 veya 1 değerini alabilir.</i>
+                </p>
+                <p>
+                    <i><b>Byte: </b>8 bitlik dizilim boyunca 0 ve 1 değerlerini kapsayan bellek ölçü birimidir. Bir byte ile 256 farklı dizilim oluşturulabilir.</i>
+                </p>
+                <p>
+                    Bilgisayar sistemlerinde hafıza, byte adı verilen küçük saklama birimlerine bölünmüştür. Bir byte 8 bitten oluşur ve bu alan yalnızca küçük bir sayıyı ya da bir harfi saklamak için yeterlidir. Modern bilgisayarda milyarlarca byte kapasiteli bellekler bulunmaktadır. Byte birimleri ile ilgili detaylı bilgi, aşağıdaki tabloda verilmiştir.
+                </p>            
+            </div>
+            <div class="col-12 col-lg-6 pb-3">
+                <img src="../img/measure.png"/>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <p style="color: orange; font-weight: bold;">Sayıların Saklanması</p> 
+            <p>
+                Bilgisayar sistemlerinde sayıların saklanabilmesi için, saklanacak değerin ikili sayı sistemindeki karşılığının bulunması gerekir. İkili sayı sistemine dönüştürme sonucunda elde edilen bitler, bilgisayar hafızasındaki byte alanlarına kaydedilir.
+            </p>
+            <div class="col-12 col-lg-6 pb-3">
+                <img src="../img/45.png"/>
+            </div>
+            <p class="col-12 col-lg-6">
+                Bilgisayarda saklanacak sayının değeri arttığında, hafıza alanından daha fazla yer kullanmak gerekir. Örneğin 2 byte ile 16 bitlik sayılar oluşturulabilir. 2 byte kullanarak saklanabilecek en büyük sayı 65535’tir. Bu sayıdan daha büyük sayıları saklamak için daha fazla byte kullanmak gereklidir.
+            </p>
+            <p class="col-12 col-lg-6">
+                Bilgisayarda negatif tam sayıları ve reel sayıları saklamakta mümkündür.Negatif sayıların bilgisayar hafızasında saklanmasında ikiye tümleyen yöntemi kullanılır. Reel sayıların bilgisayarda saklanmasında ise kayan noktalı gösterim (floating-point notation) kullanılır.
+            </p> 
+            <div class="col-12 col-lg-6 pb-3">
+                <img src="../img/2byte.png"/>
+            </div>
+            <p>
+                <i><b>Kayan noktalı gösterim: </b>Reel sayıların bilgisayarda gösterilmesini sağlayan bir yöntemdir. Bu gösterimde, sayıların gerçek değerine en yakın şekilde bilgisayar ortamına taşınması amaçlanır.</i>
+            </p>         
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Karakterlerin Saklanması</p>
+            <p>
+                Bilgisayar dünyasında harf, noktalama işareti, rakam ve bazı özel işaretler karakter olarak adlandırılır. Bilgisayardaki her karakter, belirli bir karakter setine aittir. Tüm veri tiplerinde olduğu gibi, karakterlerin bilgisayar hafızasında saklanabilmesi için ikili sayı sisteminde bir değere dönüştürülmesi gerekir.
+            </p>
+            <p>
+                Bir karakter bilgisayar hafızasında saklanırken, öncelikle karakter kodlaması (character encoding) yapılır. Bu işlem sonucunda elde edilen onlu düzendeki sayı, ikili sayı sistemine dönüştürülür.
+            </p>     
+            <p>
+                Bir kullanıcı, klavyede “a” harfine bastığında, aşağıdaki işlemler sırasıyla gerçekleşir:
+            </p>
+            <p class="madde">Bilgisayar sistemi klavyeden yapılan karakter girişini algılar.</p>
+            <p class="madde">Girilen harfin ASC’ye göre karakter kodlaması yapılır. (ASC kod değeri bulunur)</p>
+            <p class="madde">Kodlama sonucunda elde edilen “97” sayısı ikili sayı sistemine dönüştürülür.</p>
+            <p class="madde">Dönüşüm sonucunda elde edilen “01100001” sayısı hafızada saklanır.</p>
+            <p>
+                <i><b>Karakter seti: </b>Bilgisayar donanımı ve yazılımı tarafından algılanabilen, belirli karakterleri kapsayan kümedir. Kümedeki her karaktere karşılık gelen bir sayı vardır.</i>
+            </p>
+            <p>
+                <i><b>Karakter kodlama: </b>Bir karakterin, ait olduğu karakter setine göre şifrelenmesidir. Bilgisayar hesaplamalarında, veri saklamada, metinlerin iletiminde kullanılır. </i>
+            </p>
+            <p>
+                Örnek vermek gerekirse, "KAR" kelimesi bilgisayar belleğinde (veya disk üzerinde) 01001011 01000001 01010010 sayı dizisi ile tutulur. ASCII tablosundaki Onluk (Decimal) sayı olarak karşılığı 75 65 82 dir.  
+                B harfinin ASCII kod karşılığı 66 dır. 66 sayısı bilgisayarda ikilik sayı sistemindeki karşılığı olan 01000010 ile tutulur.
+            </p>
+        </div>
+
+        <div class="mt-5">
+            <p style="color: orange; font-weight: bold;">ASCII (American Standard Code for Information Language)</p>
+            <p>
+                Dilimize “Bilgi Değişimi İçin Amerikan Standart Kodlama Sistemi” olarak giren ASC, Latin alfabesi üzerine kurulu, 7 bitlik bir karakter kodlama şemasıdır. İlk kez 1963 yılında ANS (American National Standards Enstitute) tarafından standart olarak sunulmuştur. Bilgisayarlarda ve iletişim araçlarında kullanılan metinler, ASC kodları ile temsil edilir.
+            </p>
+            <p>
+                ASC, modern karakter kodlama şemalarının öncüsüdür. Günümüzde kullanılan şemalarda birçok farklı karakter de olmasına rağmen, genel olarak ASC temel alınmıştır.
+            </p>
+            <p>
+                ASC’de 33 adet kontrol karakteri ve 95 adet baskı karakteri olmak üzere toplam 128 karakter bulunur. 0-31 arasındaki sayılarla belirtilen kontrol karakterleri, metinlerin akışını kontrol eder. 32-126 arasındaki sayılarla belirtilen baskı karakterleri, ekranda görünen metinleri oluşturur. 127 sayısı ile belirtilen karakter ise silme işlemini yapan karakterdir. 
+            </p>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-6 pt-3">
+            <P class="text-center">ASCII KARAKTER KODLARI TABLOSU</P>
+            <img src="../img/ascii-table.png"/>
+        </div>
+
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/_navbar.js"></script>
+</body>
+</html>
+
