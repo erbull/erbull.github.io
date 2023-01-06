@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+    <div id="nav-menu"></div>
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h3 font-weight-bold text-center mb-4" style="color: orange;">Stack Overflow</p>            
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Stack Overflow nedir?</p>
+            <p>
+                Eminim bir çoğunuz stackoverflow.com ismini duymuş ya da karşılaşmışsınızdır. Özellikle de yazılım dünyasıyla az çok yolu kesişmiş olanlar. Her türden ve her seviyeden yazılımcının bir araya gelerek birbirleri ile bilgi paylaştığı, etkileşim kurduğu bir tür yardımlaşma ve dayanışma sitesi.
+            </p>
+            <p>
+                Peki bu kadar büyük bir sitenin ismine ilham kaynağı olan stack overflow nedir? Bizi neden ilgilendiriyor?
+            </p>
+            <p>
+                Bazen bir program yazarsınız. Kodlarınızı yazarken tüm kurallara uymuşsunuzdur. Derleyiciniz her hangi bir hata vermez. Code Editorunuz size her şeyin yolunda ve mükemmel olduğunu söyler. Ama programınızı çalıştırdığınızda beklemediğiniz bir durumla karşılaşırsınız ve anlamlandıramadığınız bir mesajla karşılaşırsınız. İşte bellek taşması olarak adlandırdığımız STACK_OVERFLOW, yazılımcıların zaman zaman karşoılaştığı bu durumlardan biri.
+            </p>        
+        </div>
+
+        <div>
+            <p>
+                Bilgisayar ve yazılım dünyasında hiçbir şey sınırsız değildir. Bazen rakamlar gözünüze çok büyük görünse de sonuçta hepsinin bir sınırı vardır ve bu sınır oldukça katıdır. Diyelim ki bilgisayarınızın 1 GB belleği ve 1600MHZ hızında bir işlemcisi var. Bunun anlamı belleğinizin alabileceği en yüksek veri miktarının 1.073.741.824 byte olduğu, işlemcinizin de saniyede en fazla 1600 işlem gerçekleştirebileceğidir. Belleğinize 1.073.741.825 byte veri sığrıramaz, işlemcinize saniyede 1601 işlem yaptıramazsınız. (Bu rakamlar size oldukça büyük gelebilir ama bilgisayarınızda arka planda aynı anda çalışan uygulama sayısını bilseniz şaşırırsınız.)
+            </p> 
+            <p>
+                İşletim sistemleri, bilgisayarınızda çalışan, ya da sizin yaptığınız her bir yazılım için kaynak ayırırlar. Ayrılan kaynak miktarı her işletim sisteminde farklı olsa da aynı olan, yazılımımızın çalışması için bize ayrılan bu kaynağın sınırlı olmasıdır. Yani yaptığımız yazılımların düzgün ve verimli çalışmasını ve performansının yüksek olmasını istiyorsak, bize ayrılan bu kaynağı en verimli şekilde kullanmak (nasıl kullanacağımızı bilmek) zorundayız. Unutmayın, yazdığınız her bir kodun, kullandığınız her bir komutun, tanımladığınız her bir değişkenin bir karşılığı vardır ve size ayrılan bu bellek ve işlemci kaynağından yiyerek beslenirler.
+            </p>
+            <p>
+                Yaptığınız yazılımın boyutu küçükse ya da henüz yazılımınızın başlangıcındaysanız kaynaklarınızı har vurup harman savursanız da bunun maliyetini pek fark etmezsiniz. Yani nasılsa koca bir tencere dolusu çorbanız, misafirlerinizi ağırlayacak koskoca bir salonunuz var. Bol kepçe doldurun, bırakın isteyen istediği yere otursun. Ne herhangi birini ararken sıkıntı yaşarsınız ne de kimsenin aç kalma durumuyla karşılaşırsınız. Ama yazılımınız büyüdükçe misafir sayınız artar. Ve bir süre sonra bir bakarsınız ki, ne tencerede yeni gelen misafirlere verecek çorbanız kalmış, ne de onları yerleştirebileceğiniz sandalye (Bellek taşması). Üstelik herhangi birine ulaşmak istediğinizde onu bulmak için saatlerce aramak zorundasınız (performans kaybı ve yavaşlama).
+            </p> 
+            <p>
+                Böyle bir durumla karşılaşmamak için çok iyi öğrenmemiz ve anlamamız gereken üç temel konu var.
+            </p>
+            <p class="madde">Veri yapıları. (Kepçemizin büyüklüğü ve misafirlerimizin tükettiği çorba miktarı)</p>     
+            <p class="madde">Değişkenler ve nesneler. (Misafirlerimiz)</p>
+            <p class="madde">Bellek kullanımı. (Yemek salonumuz)</p>     
+        </div> 
+
+        <div class="row align-items-center"> 
+            <div class="col-6">
+                <p style="color: orange; font-weight: bold;">Bellek</p>
+                <p>
+                    İşletim sistemimizin yazılımımız için bize tahsis ettiği bellek iki kısımdan oluşur.
+                </p>
+                <p class="madde">Stack (Yığın)</p>     
+                <p class="madde">Heap (Öbek)</p>                
+            </div>
+            <div class="col-6 col-md-3 pb-3">
+                <img src="../img/stack_heap.png"/>
+            </div>
+            
+            <p>
+                Stack, tanımladığımız değişkenlerin ve işaretçiler adını verdiğimiz pointerlerin tutulduğu bellek alanıdır. Veriler burada sıralı bir şekilde tutulur. Tıpkı üst üste yerleştirilen kitaplar gibi. “Son giren ilk çıkar” mantığıyla çalışır. (FIFO: last-in, first-out) Kastedilen, verilerin okunması değil, belleğe yazılması ve işi bittiğinde silinmesi.) Çok hızlı çalışır ama boyutu HEAP’e göre daha küçüktür.
+            </p>
+            <p>
+                Heap ise array, string, object (nene) ve functionlarımızın tutulduğu alandır. Buradaki veriler rastgele yerleştirilmiştir. Bu nedenle ulaşım stacktaki kadar hızlı olmaz. Yavaş çalışır ancak, boyutu daha büyüktür.
+            </p>           
+        </div>
+
+        <div>
+            <p>
+                Şimdi bunu, biraz daha iyi anlamanız için biraz somutlaştıralım. Hatırlarsanız, Java Script dersinde cont ile tanımladığımız arraya yeniden değer ataması yapamamış ama elemanlarını değiştirebilmiştik. Hatta yeni eleman ekleyip silebilmiştik. Const komutu sabit tanımlamak için kullanıldığı için değiştirilememesi gerekirken bunun nasıl olduğuna anlam verememiştik.
+            </p>
+            <p>
+                İyi bir yazılımcı olmanın önemli ön şartlarından biri de, yazdığımız her kodun, karşılaştığımız her olayın neden ve nasılını merak etmek, sorgulamak ve anlamaya çalışmaktır. Şimdi bu olay üzerinden, değişken (variable), nesne (object), işaretçi (pointer) kavramlarını, Java Scriptin veri yapısını biraz eşeleyelim ve bunun bizim yaşadığımız olayla ilgisini kavramaya çalışalım. Bu sayede stack ve heapın yapısını, nasıl çalıştığını ve tüm bu kavramların birbiriyle olan ilişkisini da anlayabiliriz.
+            </p>           
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Veri Yapıları</p> 
+            <p>
+                Hemen bütün programlama dillerinde veri yapıları, temel (ilkel) veri türleri ile bu veri tipleri kullanılarak türetilmiş birleşik veri tiplerinden oluşur. Temel olarak üç veri tipi vardır. Bunlara “primitive (ilkel) veri tipleri” adı verilir.
+            </p>
+            <p class="madde">Tamsayı (4 byte uzunluğundadır)</p>     
+            <p class="madde">Gerçel (ondalıklı) sayı (8 byte uzunluğundadır)</p>
+            <p class="madde">Char, yani karakter. (Klavyemizdeki herhangi bir tuşa bastığımızda oluşur ve 1 byte uzunluğunda yer kaplar..)</p>
+            <p>Not: Veri uzunlıkları farklı programlama dillerinde değişebilir.</p>
+            
+            <p>
+                Bu veriler stack bellek üzerinde tutulurlar. “let a = 21;” dediğimizde oluşan değişkenimiz bir tamsayıdır. Tamsayılar bellek üzerinde 4 byte uzunluğunda yer kaplar. Bu nedenle JavaScript motoru bizim için stack üzerinde 4 byte uzunluğunda bir alan tahsis eder ve oraya 21 değerini yazar. Biz bu değeri değiştirsek bile bütün tamsayılar aynı uzunlukta yer kapladığı için sorun teşkil etmez. Eski değeri (misafiri) kaldırır, yerine yeni geleni koyar.
+            </p> 
+            <p>
+                Diğer bütün veri tipleri (string, array, object ..) bu üç veri tipinden türetilmiştirlerdir. Nesne kategorisinde yer alırlar. Nesneler, değişken (dynamic) yapılar olduğu için heap bellekte tutulurlar. Burada değişken derken verinin kapladığı alan bakımından değişken olmasını kastediyorum. Ancak ihtiyacımız olduğunda bu verilere erişebilmemiz için nesnenin heap bellekteki adresi (pointer) stack belleğe yazılır Çünkü biz heap belleğe doğrudan erişemeyiz. Bunu stack bellekten talep ederiz, o da kendisinde kayıtlı olan nesne adresi vasıtası ile o nesneyi heap bellekten alır ve bizim kullanımımıza sunar.
+            </p>         
+        </div>
+
+        <div class="p-5">
+            <img src="../img/stack.png"/>
+        </div>
+
+        <div>
+            <p>
+                Konuyu daha iyi anlayabilmek için verilerin bellek üzerine nasıl kaydedildiğine bakalım isterseniz. Bellek, her biri 1 byte (8 bit) ten oluşan hücrelere bölünmüş, ve her hücreye bir numara verilmiştir. Biz buna bellek asresi diyoruz. Bilgisayarımıza bir değişken tanımladığımızda o değişkenin sahip olduğu dört bilgi vardır. Bu sayede tekrar ulaşmak istediğimizde o veriye ulaşabiliriz. 
+            </p>
+            <p class="madde">Değişkenin adı, </p>     
+            <p class="madde">Bellek üzerindeki adresi (kaydedildiği yer),</p>
+            <p class="madde">Değişkenimize atadığımız değer, </p>
+            <p class="madde">Değişkenimizin veri tipi (tamsayı, ondalıklı sayı, char, object, string vs.)</p>
+            
+            <p>
+                Programımızda bir değişken tanımladığımızda ilk olarak değişkenimie verdiğimiz isim belleğe işlenir. Veri tipine bakılarak stack bellek üzerinde kaplayacağı alan hesaplanır. Bellek üzerinde uygun alan bulunur ve değişken değerini saklayabilmek için gerekli alan bu değişken için tahsis edilir. Sonra bu alanın başlangıç adresi değişkene verdiğimiz ismin yanına yazılır. Bellek adresleri hexadecimal, yani 16 lık sayı olarak ifade edilirler. Sonra da tanımladığımız değişkene atadığımız değer kendisi için ayrılan bu alana yazılır. Tabi stack bellekte veriler birbirinin devamına yazıldığı için bu alanın boyu sabittir ve daha sonradan değiştirilmesi de mümkün değildir. 
+            </p>
+            <p>
+                İşte burada, dinamik (değişken) veri tipleri giriyor oyun alanına. Çünkü değişkenlerin sabit boyutta tanımlanması hikayesi yazılımcıların işini bir hayli zorlaştırır. Bu nedenle yazılım dilleri, boyutları daha sonradan değiştirilebilen veri türlerini geliştirmişlerdir (Dynamic veri tipleri). Ama her şey karşılıklı. Yani terazinin bir kefesine bir şey koymak için diğer kefesinden almanız gerekiyor. Kaybımız nedir peki? Tabiiki de hız.
+            </p>
+            <p>
+                Yazının gidişatından da anlayabileceğiniz gibi, ilkel (primitive) diye adlandırdığımız sabit boyuttaki veriler (değişkenlere ait değerler) stack bellek üzerinde saklanırken, değişken (dynamic) veriler heapta saklanır. Heap bellekteki adres bilgisi ise stack üzerine yazılır. Çünkü adres bilgisi sabit boyutta bir hexadecimal sayıdan oluşur. 
+            </p> 
+            <p>
+                Şimdi gelelim bizim const komutu ile sabir olarak tanımladığımız arrayımızın içerisindeki elemanların neden korunmadığı meselesine.
+            </p> 
+            <p>
+                Okuduklarınızdan da tahmin edebileceğiniz gibi, array değişkenler ilkel (primitive) veri tipleri içerisinde yer almazlar. Türetilmiş dinamik yapılardır ve daha çok nesne yapısındadirlar. Hal böyle olunca sanırım hepinizin aklına heap bellek gelmiş olmalı.
+            </p> 
+            <p>
+                Nesneler, tanım itibarı ile iskelet yapılardır. Yani bir nesneyi oluşturduğunuzda onun içerisinde herhangi bir değer bulunmaz. Bir çeşit prototip gibi düşünün. Ya da bir iskelet. Siz önce bu prototipi tanımlar, iskeleti oluşturur, daha sonra bu iskeletten içerisinde değer konulmuş, giydirilip ete kemiğe bürünmüş yeni nesneler üretirsiniz. İşte bu açıdan baktığınızda, içerisine eleman yerleştirdiğimiz arrayın artık const komutu ile tanımladığımız array olmadığını, yeni bir nesne olduğunu düşünebiliriz. Yani const komutu, array’ın genel yapısını korur ancak içerisindeki elemanlara koruma sağlamaz. Çünkü onlar artık yeni bir nesnedirler.
+            </p>  
+        </div>
+
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/_navbar.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+   <div id="nav-menu"></div> 
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h3 font-weight-bold text-center mb-4" style="color: orange;">DOSYA ve KLASÖRLERİN YÖNETİMİ</p>            
+        </div>
+
+        <div>
+            <p>
+                Konuya başlamadan önce, konu ile ilgili terimleri bir gözden geçirip tanımlamamız gerekiyor. Disk(disc), Sürücü(Driver), Dosya(File), Klasör-Dizin (Folder-Directory) ve Kök Dizin(root).
+            </p>        
+        </div> 
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Diskler ve Sürücüler</p>
+            <p>
+                Dosya ve klasörlerin kalıcı olarak saklanabildiği fiziksel ortamlara disk adı verilir. Bunlar bazen bilgisayarımızın içerisine monte edilmiş olabilecekleri gibi (sabit disk ya da harddisk) taşınabilir ortamlar da olabilir (flashdisk, cd/dvd).
+            </p> 
+            <p>
+                Diskler, bilgisayarımız tarafından doğrudan okunamaz/yazılamazlar. Veriler, sürücü (driver) adını verdiğimiz donanım aygıtları tarafından okunur ve bilgisayarımıza aktarılır. Yine bu donanım aygıtları tarafından dizk üzerine yazılırlar. Çoğunlukla disk ve sürücü birleşik olduğu için aradaki farkı anlamasak ta, birbirinden ayrılabilen ortamlar da vardır. Mesela CD/DVD sürücüler, SD kart okuyucular, her ne kadar artık üretimden ve kullanımdan kalkmış olsalar da disket sürücüler gibi.
+            </p> 
+            <p>
+                <b>Sürücü İsimleri : </b>İşletim sistemlerinde farklılık gösterebilmekle beraber sürücüler, DOS/Windows işletim sistemlerinde A’dan Z’ye kadar bir harf ile adlandırılırlar. Harften sonra iki nokta (:) işareti kullanılırak bunun bir sürücü olduğu belirtilir. A: veya C: gibi.
+                A ve B harfleri disket sürücüler için ayrılmış harflerdir. Tabi bu, bu harflerin başka sürücülere atanamayacağı anlamına gelmez. Bunun dışındaki harfler sırasıyla diğer sürücülere verilir. Sürücü harflendirilmesi işletim sistemi tarafından yapılır. Buna ek olarak biz de harfin yanına bir etiket yazabiliriz. Yerel Disk (C:) gibi.
+            </p>
+            <div class="row align-items-center">
+                <div class="row col-12 col-lg-6 justify-content-center">
+                    <img src="../img/drivers.png">
+                </div>  
+                <p class="row col-12 col-lg-6 justify-content-center">
+                    Örneğin bilgisayarımızda bir bir sabit disk, bir DVD-ROM ve USB bağlantı noktasına takılı bir flashdisk olduğunu düşünürsek sürücüler şöyle adlandırılacaktır:
+                    <br/>Sabit Disk (C:)
+                    <br/>DVD-ROM (D:)
+                    <br/>Flash Sürücü (E:)
+                </p>             
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p style="color: orange; font-weight: bold;">Dosyalar</p>
+            <p>
+                Bilgisayarda bilgilerin kaydedildiği birimlere dosya adı verilir. Dosya içerisindeki bilgi; resim, yazı, çizim, ses gibi her şey olabilir.
+                Bir dosya ismi 3 kısımdan oluşur.
+            </p>
+            <div class="row align-items-center">
+                <div class="col-8"> 
+                    <p class="madde">
+                        <b>Dosya Adı : </b>Dosyaya kendimizin verdiği isimdir. 
+                    </p>
+                    <p class="madde">
+                        <b>Nokta: </b>Dosya adı ile dosya uzantısı ayıran işarettir. Tüm dosyalarda bulunur. Ancak bu gün dosya isimleri de bu işereti (.) içerebilmektedir. Bu durumda dosya adı ve dosya uzantısı, isim içerisinde yer alan son nokta (.) tarafından birbirinden ayrılır.
+                    </p>
+                    <p class="madde">
+                        <b>Dosya Uzantısı : </b>Dosyanın türünü, hangi yazılım tarafından oluşturulduğunu ve açılabileceğini gösteren kısımdır. Genellikle 3 harften oluşur. Bu harfler dosya türünün İngilizce karşılığının kısaltmasıdır. Örneğin şiir yazdığımız bir dosyanın uzantısı TXT’dir. TXT uzantısı TEXT kelimesinin kısaltılmış hali olup yazı anlamına gelir.
+                    </p>
+                </div>
+            
+                <div class="row col-4 justify-content-center">
+                    <img src="../img/filenames.jpg">
+                </div>
+
+                <div class="row col-6 justify-content-center">
+                    <img src="../img/extentions.jpg">
+                </div>
+                <p class="row col-6">
+                    Bir dosyanın sadece uzantısına bakarak içerisindeki bilginin türünü öğrenebiliriz.  Örneğin MP3 uzantılı bir dosyada müzik, PDF uzantılı bir dosyada bir kitap olduğunu dosyayı açmadan anlayabiliriz.
+                </p>
+            </div>            
+        </div>
+
+        <div class="row mt-4">
+            <p style="color: orange; font-weight: bold;">Klasörler</p> 
+            <p>
+                Ortak bir özelliğe sahip dosyaları bir arada bulunduran birimlere klasör (dizin) denir. Klasörleri günlük hayatımızda kullandığımız dosya klasörlerine benzetebiliriz.
+            </p>
+            <p>
+                <b>Niçin Klasör Kullanırız?</b>
+            </p> 
+            <p>
+                Nasıl ki alışveriş merkezlerinde binlerce ürün içerisinden almak istediğimizi reyonlar sayesinde kolayca bulabiliyorsak klasörler de dosyalarımızı gruplamamızı ve dilediğimizde kolayca ulaşmamızı sağlar. Dizin (directory) olarak ta bilinir.
+                Bilgisayarımızda da fotoğraflarımızı Resimler, müziklerimizi Müziğim, yazılarımızı da Belgelerim klasörüne koyarız. Böylece hangi dosyaya ihtiyacımız varsa o klasöre gider ve zaman kaybetmeden o dosyayı açabiliriz.
+            </p>
+            <p>
+                Klasör İsimlerin tek bölümden oluşur. Yani uzantıları olmaz. 
+            </p>
+            <div class="col-4">
+                <img src="../img/folders.jpg">
+            </div> 
+            <div class="col-8">
+                <p>
+                    <b>Alt Klasörler </b> 
+                </p>
+                <p>
+                    Bir klasör içerisinde birden fazla klasör yer alabilir. O klasörler içerisine başka klasörler, onların içerisine de başka klasörler oluşturur ve dosyalarımızı bu klasörler içerisinde saklarız. Herhangi bir klasör içerisinde bulunan klasörlere alt klasör (sub folder) denir (alt dizin - subdirectory).
+                </p> 
+                <p>
+                    Tüm bu birbiri içerisine geçmiş klasörler, hiyerarşik bir yapı oluştururlar. Bu yapı “dizin ağacı (tree)” olarak adlandırılır.
+                </p>                
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p style="color: orange; font-weight: bold;">ROOT</p>
+            <p>
+                Klasör ağacında, hiyerarşide en üstte bulunan veya ilk gelen klasöre (dizine) denir. Bir ağacın kökü gibi düşünülebilir. Diğer dizinler ona bağlanır.
+            </p>
+            <p>
+                Her diskin bir kök dizini (root) vardır ve “\” ile ifade edilir. Yani disk içerisindeki tüm yol tanımlamalarının başlangış noktası “\” tır. Diskimizin biçimlendirilmesi (formatlama) sırasında otomatik olarak oluşturulur ve disk içerisindeki bulunan bütün dosya ve klasörler kök dizin içerisinde oluşturulur. Kök dizini bütün dosya ve klasörlerinizi içerisinde barındıran büyük bir dolap veya klasör olarak farz edebilirsiniz.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <p style="color: orange; font-weight: bold;">Dosya, Klasör ve Sürücü Adresleri</p>
+                <p>
+                    Bir dosyanın/klasörün adresi o dosyanın/klasörün hangi sürücü ve klasör içerisinde olduğunu gösterir.
+                </p>
+                <p>
+                    Dosya, klasör veya sürücü adreslerinde sürücü ve klasör isimlerinden sonra ters bölü işareti (\) kullanılır.
+                </p>
+                <p>
+                    Örneğin CD-ROM sürücümüzün adresi: D:\
+                    <br/>CD-ROM’daki Filmler klasörünün adresi D:\Filmler
+                    <br/>CD-ROM’daki Filmler klasörünün içerisindeki Çanakkale.AVI film dosyamızın adresi: 
+                    D:\Filmler\Çanakkale.AVI
+                </p>                
+            </div>
+
+            <div class="col-6">
+                <img src="../img/path.jpg">
+            </div> 
+
+            <p>
+                (Not: Bu konu ileride ayrıca ele alacağız.)
+            </p>
+        </div>
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/_navbar.js"></script>
+</body>
+</html>
+

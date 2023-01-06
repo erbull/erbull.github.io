@@ -1,0 +1,46 @@
+
+#main_nav{
+	position:relative;
+}
+
+#main_nav li:hover ~.animation{
+    opacity: 1;
+}
+
+#animation {
+	opacity: 0;
+	position: absolute;
+	height: 100%;
+	left:500px;
+	width: 10%;
+	top: 0;
+	background-color:rgb(237, 134, 74);
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+	z-index: -1;
+
+}
+
+#main_nav .nav-item:nth-child(1) {
+	width: 110px;
+}
+#main_nav .nav-item:nth-child(2) {
+	width: 130px;
+}
+#main_nav .nav-item:nth-child(3) {
+	width: 130px;
+}
+#main_nav .nav-item:nth-child(4) {
+	width: 80px;
+}
+#main_nav .nav-item:nth-child(5) {
+	width: 80px;
+}
+#main_nav .nav-item:nth-child(6) {
+	width: 90px;
+}
+
+
+
+
+

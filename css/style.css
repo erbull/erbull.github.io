@@ -1,0 +1,46 @@
+body{
+    background-color: #020312;
+}
+
+nav{
+    background-image: linear-gradient(#020312 70%, transparent);
+}
+
+li{
+    text-align: center;
+}
+
+section{
+    margin-top:100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main{
+    height: calc(100vh);
+}
+
+.logo{
+    width: 170px;
+}
+
+.cube-base {
+    perspective: 6000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orangered;
+}
+
+.last-text{
+    display:flex;
+    background-image: linear-gradient(transparent, #020312 80%) ;
+    height: 100px;
+    align-items: end;
+    justify-content: center;
+    font-size: 0.8rem;
+    color:gray;
+}
