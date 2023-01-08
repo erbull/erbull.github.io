@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+    <div id="nav-menu"></div>
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h3 font-weight-bold text-center mb-4" style="color: orange;">Sayı Sistemleri</p>            
+        </div>
+
+        <div>
+            <p class="madde">İkili Sayı Sistemi (Binary)</p>
+            <p class="madde">Sekizli Sayı Sistemi (Oktal)</p>
+            <p class="madde">Onlu Sayı Sistemi (Decimal)</p>
+            <p class="madde">Onaltılı Sayı Sistemi (Heksadecimal)</p>
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">İkili (Binary) Sayı Sistemi</p>
+            <p>
+                İkili sayı sisteminde sadece 0 ve 1 rakamları kullanılır. İkilik sistemdeki hanelere bit adı verilir.
+            </p>
+            <p>
+                Binary sayı kullanıldığında bunu belirtmek için sayının baş kısmına büyük “B” harfi kullanılır. Örneğin (10010101)₂ gibi bir binary sayı kullanılmak istenildiğinde, “B10010101” olarak yazılır.
+            </p>     
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Sekizlik (Octal) Sayı Sistemi</p>
+            <p>
+                Sekizlik sayı sisteminde sayılar sadece 8 rakam kullanılarak ifade edilir. 0, 1, 2, 3, 4, 5, 6 ve 7. Sekizlik sayı sisteminde her hane ikilik sayı sistemindeki 3 biti ifade eder.
+            </p>
+            <p>
+                Octal(sekizliklik sayı sistemi) sayı yazmak için, sayımızın başına 0 ekleyerek, bunun octal olduğunu belirtebiliyoruz. Örnek : 032 = (32)₈ = (26)₁₀
+            </p>     
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Onluk (Decimal) Sayı Sistemi</p>
+            <p>
+                Hindu Arabic, Arabic olarak ta bilinir. 10 farklı rakam kullanılır. 0, 1, 2, 3, 4, 5, 6, 7, 8 ve 9. Kesirli sayıların gosterimi icin nokta işareti kullanılır.
+            </p>
+            <p>
+                Onluk(decimal) bir sayı kullanıldığında olduğu gibi yazılır. Yani önüne veya arkasına herhangi bir şey yazılmaz.
+            </p>     
+        </div>
+
+        <div class="">
+            <p style="color: orange; font-weight: bold;">Onaltılık (Hexadecimal) Sayı Sistemi</p>
+            <p>
+                Onaltılık sayı sisteminde sayıların ifade edilmesi icin 16 değere ihtiyac vardır. Bunun için 10 rakam ve 6 harften yararlanılır. 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E ve F.
+            </p>
+            <p>
+                Hanelerin kullanımı ondalık sayı sistemi ile aynıdır.
+            </p>
+            <p>
+                Hexadesimal sayı kullanılacağı zaman sayının baş kısmına C dilinde olduğu gibi “0x” ifadesi kullanılmalıdır. Örneğin; (A8)₁₆ hexadesimal sayısı “0xA8” şeklinde yazılır.
+            </p>
+        </div>
+
+        <div class="mt-5">
+            <p class="h4 font-weight-bold" style="color: orange;">Sayı Sistemleri Arasında Geçiş</p>
+            <p>
+                Matematiksel olarak sayı sistemleri arasındaki geciş carpma ve bolme işlemleri ile yapılır. Onlukk sayı sisteminden başka sayı sistemine gecerken bolme, diğer sayı sistemlerinden onluk sisteme gecerken carpma işlemi kullanılır.
+            </p>
+            <p>
+                İkilik, sekizlik ve onaltılık sayı sistemleri arasındaki gecişler daha pratik şekillerde yapılabilir. Onaltılık (hexadecimal) sistemdeki her hane, ikilik (binary) sistemde dört haneye karşılık gelir.
+            </p>
+            <p>(A09C)₁₆ = 0101 0000 1001 1100</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col">
+                <p style="color: orange; font-weight: bold;">Onlu Sayı Sisteminden İkili Sayı Sistemine Dönüşüm</p>
+                <p>
+                    Onluk sayı sisteminde ifade edilmiş bir sayının ikili sayı sistemine çevrilmesi için 2’ye bölme işlemi uygulanır. Bölümün değeri 2’den az olana kadar, bölme işlemine devam edilir. Kalan değerlerinin tersten yazılmasıyla ikili sayı sistemindeki gösterim elde edilir. 
+                </p>              
+            </div>
+            <div class="col-12 col-md-6 pb-3">
+                <img src="../img/binary.png"/>
+            </div>   
+        </div> 
+
+        <div class="row align-items-center"> 
+            <p style="color: orange; font-weight: bold;">İkili Sayı Sisteminden Onlu Sayı Sistemine Dönüşüm</p>            
+            <div class="col-12 col-md-6 pb-3">
+                <img src="../img/decimal.png"/>
+            </div>            
+            <div class="col">
+                <p>
+                    İkili sayı sisteminde ifade edilmiş bir sayının onlu sayı sistemine çevrilmesi için her basamak 2’nin kuvveti ile çarpılır. Çarpma işlemi en sağ basamaktan ve 20 ile başlar. Her basamak geçişinde kuvvet 1 arttırılır. Çarpımlar sonucunda elde edilen değerler toplanarak onlu sayı sistemindeki sayı elde edilir.
+                </p>             
+            </div>       
+        </div>
+
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/_navbar.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+    <div id="nav-menu"></div>
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h3 font-weight-bold text-center mb-4" style="color: orange;">VERİ YAPILARI</p>            
+        </div>
+
+        <div>
+            <p class="h4 font-weight-bold mb-5" style="color: orange; font-weight: bold;">Veriden Bilgiye Geçiş</p>
+            <p>
+                Bilgisayarların dilinde 0 ve birlerden başka kalime olmadığını ve yazdığımız her karakterin, her sayının, her sözcüğün ve her komutun 
+                bilgisayarlar tarafından kaydedilmesi, anlaşılabilmesi ve işlenebilmesi ikili (binary) sayı sisteminde kodlanması gerektiğinden bahsetmiştik. 
+                İşte biz bu yapıyı veri olarak adlandırıyoruz.
+            </p>
+            <p>
+                Veriler bilgisayar belleğinde 1 ve 0’lardan oluşan bir "Bit" dizisi olarak saklanır. Bu verinin yazılımlar aracılığı ile ete kemiğe büründürülmüş, 
+                bir anlam kazanmış haline ise bilgi diyoruz.
+            </p>
+            <p>
+                Bit dizisi biçimindeki verinin anlamı, verinin yapısından ortaya çıkarılır. Herhangi bir verinin yapısı değiştirilerek farklı bilgiler elde edilebilir.
+            </p>
+            <p>
+                Örneğin; 32 bitlik “0100 0010 0100 0001 0100 0010 0100 0001” veriyi ele alalım.
+            </p>
+            <p>
+                Bu veri ASCII veri yapısına dönüştürülürse, her 8 bitlik veri grubu bir karaktere karşılık düşer;
+            </p>
+            <div class="row">
+                <div class="col-auto text-center"><span class="me-4">0100</span><span>0010</span><p class="text-center">B</p></div>
+                <div class="col-auto text-center"><span class="me-4">0100</span><span>0001</span><div class="text-center">A</div></div>
+                <div class="col-auto text-center"><span class="me-4">0100</span><span>0010</span><div class="text-center">B</div></div>
+                <div class="col-auto text-center"><span class="me-4">0100</span><span>0001</span><div class="text-center">A</div></div>
+            </div> 
+            <p>
+                Bu veri BCD (Binary Coded Decimal) veri yapısına dönüştürülürse, bitler 4’er bitlik gruplara ayrılır ve her grup bir haneye karşılık gelir;
+            </p>
+            <div class="row">
+                <div class="col-auto text-center">0100<p class="text-center">4</p></div><div class="col-auto text-center">0010<p class="text-center">2</p></div>
+                <div class="col-auto text-center">0100<p class="text-center">4</p></div><div class="col-auto text-center">0001<p class="text-center">1</p></div>
+                <div class="col-auto text-center">0100<p class="text-center">4</p></div><div class="col-auto text-center">0010<p class="text-center">4</p></div>
+                <div class="col-auto text-center">0100<p class="text-center">4</p></div><div class="col-auto text-center">0001<p class="text-center">1</p></div>
+            </div> 
+            <p>
+                Bu veri işaretsiz 16 bitlik tamsayı ise, her 16 bitlik veri bir işaretsiz tamsayıya karşılık düşer;
+            </p>
+            <div class="row">
+                <div class="col-auto text-center"><span class="me-4">0100</span><span class="me-4">0010</span>
+                                             <span class="me-4">0100</span><span>0001</span><p class="text-center">16961</p></div>
+                <div class="col-auto text-center"><span class="me-4">0100</span><span class="me-4">0010</span>
+                                             <span class="me-4">0100</span><span>0001</span><p class="text-center">16961</p></div>
+            </div> 
+            <p>
+                Bu veri işaretsiz 32 bitlik tamsayı ise, 32 bitlik bütün grup olarak bir işaretsiz tamsayıya karşılık düşer;
+            </p>
+            <div class="row">
+                <div class="col-auto text-center"><span class="me-4">0100</span><span class="me-4">0010</span>
+                                             <span class="me-4">0100</span><span class="me-4">0001</span>
+                                             <span class="me-4">0100</span><span class="me-4">0010</span>
+                                             <span class="me-4">0100</span><span>0001</span><p class="text-center">1111573057</p></div>
+            </div> 
+        </div>
+
+        <div class="row mt-4">
+            <p style="color: orange; font-weight: bold;">Belleğin Yapısı</p>
+            <div class="col-12 col-lg-6 p-4">
+                <img src="../img/bellek_veri.png"/>
+            </div>
+            <div class="col-12 col-lg-6 p-5">
+                <p>
+                    Yapısal olarak bellek, büyüklüğüne bağlı olarak binlerce, milyonlarca l’er Byte (8 Bit)’lik veriler saklayabilecek biçimde tasarlanmış bir elektronik devredir. Bellek, her byte’ı bir hücre ile gösterilebilecek büyükçe bir tablo olarak çizilebilir. 
+                    Örneğin 1GB bir bellek, 1024*1024*1024 = 1073741824 adet hücreden oluşur. Her hücreye bir adres atanmıştır. Bu adreslerin değerleri 0 ila belleğin sahip olduğu üst değere bağlı olarak değişebilir.
+                </p>
+                <p>
+                    Bellek adresleri genellikle onaltılık (hexadecimal) sayı sisteminde ifade edilir. 0x3fffd14 sayısı onluk (decimal) sayı sisteminde 67108116 sayına karşılık gelir. 
+                    Bunun anlamı, tam değişkeni, program çalıştığı sürece, bellekte 67108116. - 67108120. numaralı gözler arasındaki 4 baytlık hücreyi işgal edecek olmasıdır.
+                </p>                
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <p class="h4 font-weight-bold mb-4" style="color: orange;">VERİ YAPILARI</p>            
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">Veri Yapısı Nedir?</p>
+            <p>
+                Bir kitaba ulaşabilmek için kitapların düzeni ile ilgili bilgiye ihtiyaç vardır. Veri yapısı (Data Structure) verinin veya bilginin bellekte tutulma şeklini veya düzenini gösterir.
+            </p>
+            <p>
+                Tüm programlama dillerinin, genel olarak, tamsayı, kesirli sayı, karakter ve sözcük gibi kabul edilmiş veri tipi tanımlamaları vardır. 
+                Bir program değişkeni bile basit bir veri yapısı olarak kabul edilebilir. Programcı, programını yazacağı problemi incelerken, program algoritmasını oluştururken, programda kullanacağı değişken ve sabitlerin veri tiplerini bu tanımlamaları dikkate alarak belirler. 
+                Program, belleğe saklama/yazma ve okuma işlemlerini, işlemci aracılığı ile işletim sistemine yaptırtır. Yani programın çalışması süresince program, işlemci ve işletim sistemi ile birlikte iletişim halinde, belleği kullanarak işi ortaya koyarlar.
+                Veri için seçilen tip bilgisayarın birçok kısmını etkiler, ilgilendirir. Bundan dolayı uygun veri tipi seçimi programlamanın önemli bir aşamasıdır. 
+                Veri yapıları, büyük (ve potansiyel olarak artan) miktarlardaki verilerin verimli bir şekilde yönetilmesi, depolanması, organize edilmesi ve kullanılması için gereklidir. 
+                Programcının doğru karar verebilmesi, veri tiplerinin yapılarını tanımasına bağlıdır. Zayıf bir şekilde birbirine bağlanmış iyi tanımlanmamış program öğeleri herhangi bir aşamada kolaylıkla iş göremez hale gelebilir.
+            </p>
+            <p>
+                Program, işlemci ve işletim sistemi her veri yapısına ait verileri farklı biçim ve teknikler kullanarak, bellekte yazma ve okuma işlemleriyle uygulamalara taşırlar. 
+                Bu işlemlere Veri Yapıları Algoritmaları denir. Çeşitli veri yapıları oluşturmak ve bunları programlarda kullanmak programcıya programlama esnekliği sağlarken, bilgisayar donanım ve kaynaklarından en etkin biçimde faydalanma olanakları sunar. 
+                Ayrıca programın hızını ve etkinliğini arttırır, maliyetini düşürür.
+            </p>
+            <p>
+                Veri Yapıları Temel/İlkel (primitive), Basit (simple), Birleşik (compound) olarak üç sınıfta incelenebilir;
+            </p>
+            <p class="madde"><b>Temel veri yapıları,</b> en çok kullanılan ve diğer veri yapılarının oluşturulmasında kullanılırlar.</p>     
+            <p class="madde"><b>Basit veri yapıları,</b> temel veri yapılarından faydalanılarak oluşturulan diziler (arrays), stringler, yapılar (structures) ve birleşimler (unions)’dir.</p>
+            <p class="madde"><b>Birleşik veri yapıları,</b> temel ve basit veri yapılarından faydalanılarak oluşturulan diğerlerine göre daha karmaşık veri yapılarıdır.</p> 
+        </div>
+
+        <div class="row mt-4">
+            <p style="color: orange; font-weight: bold;">Değişkenler ve Veri Tipleri</p>
+            <p>
+                Değişkenler programlamada geçici bilgileri sakladığımız ve programcı tarafından belirlenen yapılardır. Değişkenler programlamanın temel yapısını oluşturmaktadır ve tüm programlama dillerinde kullanılan bir yapıdır. Değişkenler sayesinde program içinde yaptığımız işlemleri hafıza da tutar ve gerektiği yerlerde kullanırız. 
+            </p>
+            <p>
+                Bir programlama dillinde, belli bir tipte değişken tanımlanıp ve bir değer atandığında, o değişkene dört temel özellik eşlik eder:
+            </p>
+            <p class="madde">Değişkenin adı, </p>     
+            <p class="madde">Bellek üzerindeki adresi (kaydedildiği yer),</p>
+            <p class="madde">Değişkenin sahip olduğu değer (içerik), </p>
+            <p class="madde">Değişkenin veri tipi (tamsayı, ondalıklı sayı, char, string vs.)</p>    
+            <p>
+                Değişkenlerde Veri Tipi, adından da anlaşılacağı üzere saklanacak verinin tipini belirtmektedir. Bunlar sayılar, sözcükler ve programatik alanlar olabilir. Her değişkenin program içinde kullanıldığı ve çağrıldığı benzersiz bir ismi vardır. Bu değişkenlere, daha sonra kullanmak üzere bir değer atarız , işletim sistemimiz de bu değişken içerisine koyduğumuz değeri hafızada tutar.
+            </p>
+            <p>
+                Bu yazıda, konuyu daha iyi kavramanız açısından yalnızca ilkel (primitive) veri tiplerinden bahsedip diğer veri tiplerini daha ileri konularda ele alacağız. İlkel veri tipleri genel olarak üç tanedir.
+            </p>
+            <p>
+                <p class="madde">Integer (Tamsayı)</p>     
+                <p class="madde">Float (Ondalıklı sayı)</p>
+                <p class="madde">Char (Karakter veya sembol)</p>
+            </p>
+            <p>
+                Bir çok programlama dilinde daha fazla ilkel (primitive) veri tipi bulunsa da bunlar temel olarak bu üç yapıyı esas alırlar. Mesela bazı dillerde tamsayılar, short, int ve long olarak üç kısma ayrılmıştır. Bu ayrım verinin yapısına değil uzunluğuna bağlı olarak yapılmış bir düzenlemedir. Yani short 2 byte uzunluğunda yer tutup bununla 65536 sayı üretebilirken (2<sup>16</sup>), integer veri tipi 4 byte, long veri tipi 8 bytetan oluşur ve çok daha fazla sayı üretebilirler. Ama yapı olarak baktığımızda sonuçta hepsi de tam sayıdır.
+            </p>
+            <p>
+                Yine aynı şeyi ondalıklı sayılar, yani float veri tipi için de söyleyebiliriz. Mesela double veri tipi de floattan daha çok sayı üretebilen bir ondalıklı sayıdır, bellekte daha fazla yer kaplar ama sonuçta ondalıklı sayıdır.
+            </p>
+            <p>
+                Char veri tipinin çok daha özel bir yapısı var. Toplamda 1 byte (8 bit) uzunluğa sahip olan bu veri tipi, karakterlerin ve sembollerin ASC kod tablosunda yer alan sayısal karşılığını tutar. (Eğer okumamışsanız konuyu daha iyi anlamak için <a href="../programming/datastorage.html">“Veriler Bilgisayarda Nasıl Saklanır”</a> konusunu okuyabilirsiniz.)
+            </p>
+            <p>
+                “Peki ya stringler?” dediğinizi duyar gibiyim. Türkçede katar anlamına gelen bu veri tipi, adından da anlaşılacağı üzere primitive (ilkel) bir veri tipi değil, bir tür array, yani dizidir. Karakterlerin (char) art arda sıralanmasıyla oluşur.
+            </p>
+            <p>
+                Tabi bir de “boolean” diye bir veri tipimiz var. Bir byte uzunluğundaki bu veri tipi içerisinde 0 veya 1 tamsayılarından birisini barındırır. 0 ise false (yanlış), 1 ise true (doğru) anlamı taşır. Ama aslında 0 haricindeki bütün değerler true (doğru) değeri döndürürler. 
+            </p>
+            <p>
+                Son olarak, çok sık karşınıza çıkacak olan “null” kavramından da bahsedip konuyu şimdilik sonlandıralım. Herhangi bir değişkenin değer atanmamış haline biz null adını veriyoruz. Bir değişken tanımlandığında içerisine herhangi bir değer yerleştirilmemişse (atanmamışsa) null olarak adlandırılır.
+            </p>
+            
+            <div class="col-12 col-lg-8 p-4">
+                <p class="text-center">Primitive (İlkel) Veri Tipleri</p>
+                <img src="../img/datatype.png"/>
+            </div>
+        </div>
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/_navbar.js"></script>
+</body>
+</html>
