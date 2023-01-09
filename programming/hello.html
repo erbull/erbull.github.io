@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+
+        .cdiv{
+            background-color:darkslategray;
+            border-radius: 1rem;
+            margin: 1em;
+        }
+
+        .code{
+            color: gainsboro;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+    <div id="nav-menu"></div>
+    
+    <section class="container pt-3">
+        <div class="pt-3">
+            <p class="h3 font-weight-bold mb-4" style="color: orange;">Temel Giriş - Çıkış İşlemleri (Basic IO)</p> 
+        </div>
+
+        <div> 
+            <p>
+                Başlamadan önce, masaüstümüze vaya dilediğimiz herhangi bir konuma “C_Dersleri” adında bir klasör oluşturalım. Çalışmalarımızı bu klasör içerisine kaydedeceğiz. (Bu konuda ihtiyacınız varsa daha önce yazdığım “Dosya ve Klasör Yönetimi” isimli yazıyı okuyabilirsiniz. Yeterli gelmediği takdirde bu konuda başka kaynaklara başvurmanızı ve yazılım hayatınız boyunca size her zaman gerekli olacak bu bilgileri edinip pekiştirmenizi şiddetle tavsiye ederim. İnternette istemediğiniz kadar çok yazılı ve görüntülü kaynak mevcut.)
+            </p>
+            <p>
+                Şimdi, başlat notepad isimli uygulamayı çalıştıralım ve aşağıdaki kodları yazalım.
+            </p>
+            <p>
+                <i><b>Not: </b>Bilgisayarlar, kod yazılımında söz dizimi (sintax) konusunda oldukça katıdırlar. Bu nedenle bu kodları yazarken noktalama işaretlerii dahil hiçbir hata yapmamanız önemli.</i>
+            </p>     
+        </div>
+
+        <div class="col-auto cdiv p-3">
+            <p class="code">
+                #include&lt;stdio&gt;<br/><br/>
+                int main(){<br/>&emsp;printf("Merhaba Dünya");<br/>&emsp;return 0;<br/>}
+            </p>
+        </div>
+        
+        <div> 
+            <p>
+                C ile ilgili olarak bu ve önümüzdeki yazılarda birçok komut/fonksiyon göreceğiz. Ama hep kullanacağımız ve ilk öğrenmemiz gerekenler temel giriş çıkış fonksiyonlarıdır. C de klavyeden bir değer alabilmek için scanf(); ekrana herhangi bir şey yazdırmak içinse printf(); fonksiyonu kullanılır.
+            </p>
+            <p>
+                Şimdi notepad programımızız Dosya menusundan “Kaydet” / “Farklı Kaydet” seçeneklerinden birine tiklayarak dosyamızı kaydedeceğiz. Dosyamızı kaydederken açılan pencereden “kayıt türü” seçeneğini “Tüm dosyalar (*.*)” olarak seçiyoruz ve programımızın adını belirleyip uzantısını .c yapıyoruz. (“MerhabaDunya.c”). Tabi kaydedeceğimiz yer olarak oluşturduğumuz klasörü seçmeyi de ihmal etmiyoruz.
+            </p>
+            <p>
+                Yukarıdaki kod çalıştırıldığında konsol ekranına “Merhaba Dünya” yazdırılacaktır. Fakat dosyamız (programımız) bu haliyle henüz çalıştırılmaya hazır değil. Biraz daha sabır.
+            </p>
+            <p>
+                Bilgisayarlar, kullandığı dil bize daha yakın olan yüksek seviye dillere ait kodları doğrudan çalıştıramazlar. Onlar sadece makine dilinden, yani 0 ve 1 lerden anlar. Bu nedenle, yazdığımız kodların önce derleme (compile) adı verdiğimiz bir işlemden geçmesi ve makine diline dönüştürülmesi gerekir.
+            </p>
+            <p>
+                Derleme işini yapan derleyici programlara “compiler” denir. C için internet üzerinden birçok Compiler bulabilirsiniz. Yazdığımız programlar işletim sistemi üzerinde çalıştığı için her işletim sisteminin kendisine özel derleyici programı vardır. Biz Windows İşletim sistemi kullandığımız için konuyu windows ekseninde anlatacağız. Kullandığınız işletim sistemi farklı ise biraz araştırma yapıp anlatılanları kendi işletim sisteminize uyarlamanız gerekecek. Eminim bu konuda da kaynak bulmakta zorlanmayacaksınız.
+            </p>
+            <p>
+                Bu işlem için GCC adlı bir yazılım kullanacağız. GCC gelmiş geçmiş en iyi derleyicilerden biri olduğu gibi, özgür bir yazılımdır! Richard Stallman tarafından açık kaynak koduyla sunulmuştur ve arzu ettiğiniz takdirde, sonuna kadar değişiklik yapma imkanınız vardır.
+            </p>
+            <p>
+                Şimdi <a href="https://sourceforge.net/projects/mingw/">buraya </a>tıklayarak minGV yazılımını indirip bilgisayarımıza kuralım. Dilerseniz <a href="https://sourceforge.net/projects/mingw/files/latest/download">buraya </a>tıklayarak doğrudan da indirebilirsiniz.
+            </p> 
+            <p>
+                Artık hazırız. Şimdi oluşturduğunuz dosyanın (merhabaDunya.c) bulunduğu klasörü açın. Klasör içerisindeki herhangi bir noktaya sağ tıklayın ve “komut isteminde aç” veya “terminaldeaç “ seçeneklerinden hangisini görüyorsanız tıklayın. Eğer açılan pencere “power shell” ekranı ise cmd yazıp entere basın. (Başlat menusunden komut istemi (command prompt) çalıştırıp cd komutu ile dosyanızın olduğu dizine de gelebilirsiniz.)
+            </p>
+            <p>Komut satırına</p>
+            <p class="code">
+                gcc merhabaDunya.c
+            </p>
+            <p>
+                Yazarak programımızı derliyoruz. Derleme sonrası klasörünüzde a.exe isminde bir dosya oluşacak. “dir” komutu ile (dir yazıp enter tuşuna basarak) dosyalarınızı listeleyebilirsiniz. Eğer oluşacak dosyanızın a.exe olarak değil de başka bir isimle oluşmasını istiyorsanız o zaman gcc komutunu şöyle kullanmanız gerekecek.
+            </p>
+            <p class="code">
+                gcc merhabaDunya.c merhabaDunya.exe
+            </p>
+            <p>
+                Burada merhabaDunya.exe dilediğiniz ismi getirebilirsiniz. Uzantısı .exe olmak şartıyla.                
+            </p>
+            <p>
+                Eğer şu ana kadar her şey yolunda gitti ise ilk programınızı çalışır hale getirmiş olmalısınız. Tebrikler. Programımızı test etmek için komut satırına ismini yazıp çalıştıralım.
+            </p>
+            <p class="code">
+                merhabaDunya.exe
+            </p>
+            <p>
+                ya da
+            </p>
+            <p class="code">
+                merhabaDunya
+            </p>
+            <p><i><b>Not: </b>Programınızı grafik ekranınızdan mouse ile üzerine tıklayarak çalıştırdığınızda herhangi bir şey göremezsiniz ki bu normal ve beklenen bir durum. Çünkü programınız öyle hızlı çalışır ve konsol ekranınız öyle çabuk “Merhaba Dünya” yazısını görüntüler ve kapanır ki, hiçbir şey görebilmeniz mümkün olmaz. Bunun çözümünü de ileriki derslerimize bırakalım.</i></p>   
+        </div>
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/nav_bar.js"></script>
+</body>
+</html>
+
