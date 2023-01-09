@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+
+        .cdiv{
+            background-color:darkslategray;
+            border-radius: 1rem;
+            margin: 1em;
+        }
+
+        .code{
+            color: gainsboro;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+   <div id="nav-menu"></div> 
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h3 font-weight-bold text-center mb-4" style="color: orange;">PATH (Erişim Yolu) nedir, nasıl kullanılır?</p>            
+        </div>
+
+        <div>
+            <p>
+                HTML de web sayfalarımızı düzenlerken sık sık başka dosyaları kullanma ihtiyacı duyarız. (Resim, css dosyası, js dosyası vs). Bu dosyaları sayfamıza eklemek için dosyanın bulunduğu yeri (adresi) tam olarak tanımlayamadığımızda ise sorun yaşarız.
+            </p> 
+            <p>
+                Bazen de bir web sayfasını bilgisayarımıza indirip açmaya çalıştığımısda karşımıza beklenmedik bir sorun çıkar ve sayfadaki fotoğraflar görünmediği gibi CSS dosyası görevini yapamadığı için içeriği düzenlenmemiş bir görüntüyle karşılaşırız. Bazılarımız arkadaşlarımızın github’a attığı çalışmalarını indirip bilgisayarımızda açmak istediğinde böyle bir akıbete maruz kalmıştır sanırım.
+            </p>
+            <p>
+                İşte burada PATH adını verdiğimiz kavram devreye giriyor. PATH (erişim yolu) nedir, nasıl belirlenir?
+            </p>
+            <p>
+                <b>Path (Erişim Yolu)</b>, her işletim sisteminin kendine özgü olarak kullandığı, işletim sisteminden hedef dosyaya kadar varan yol haritasıdır. Path sayesinde bilgisayar içerisindeki dosyaların tümünün eşsiz olması sağlandığı gibi aynı zamanda dosyaların tam yerlerinin de bilinmesi mümkün olur.
+            </p> 
+            <p>
+                Path tanımlaması işletim sistemlerine özgü olup farklılık göstermekle birlikte temelde aynı (benzer) metod ve yöntemleri kullanır. Biz de konuyu daha iyi anlayabilmek için referans noktası olarak Windows-DOS’taki PATH tanımlama formatını ele alacağız ve buradan yola çıkarak HTML’deki PATH kullanımını anlamaya çalışacağız. 
+            </p> 
+            <p>
+                Dos işletim sisteminde diskler harflerle ifade edilir ve bunun bir disk olduğunu göstermek için “:” kullanılır. Örneğin C:, D:, E: gibi. Buradaki C: harddiskimizi, D: Cd sürücümüzü, E: de flash diskimizi tanımlar. (Diski tanımlayan harfler değişebilir. Yani bazen birden fazla diskiniz olduğunda C: ve D: disklerinizi tanımlar, CD Rom’unuzu tanımlamak için de F:, G: gibi başka harfler kullanılır.)
+            </p>
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/path.png">
+            </div>
+        </div> 
+
+        <div>
+            <p>
+                Her diskin ROOT adını verdiğimiz bir kök dizini vardır ve “\” ile ifade edilir. Yani disk içerisindeki tüm yol tanımlamalarının başlangış noktası “\” tır. Kök dizini bütün dosya ve klasörlerinizi içerisinde barındıran büyük bir dolap veya klasör olarak farz edebilirsiniz. Bu durumda “C:\” yazdığımızda C: diskinin kök dizinini, “\” yazdığımızda ise o an üzerinde işlem yaptığımız diskin kök dizinini tarif etmiş oluruz. Yani yol tarifi vereceğimiz dosya HTML dosyamız ile aynı disk üzerinde bulunuyorsa “C:” ifadesini kullanmamıza gerek kalmaz, yol tarifine doğrudan “\” ile başlayabiliriz.
+            </p> 
+            <p>
+                Kök dizin ya da kök klasör içerisine klasörler, o klasörler içerisine başka klasörler, onların içerisine de başka klasörler oluşturur ve dosyalarımızı bu klasörler içerisinde saklarız. Bu klasörler DOS işletim sisteminde “dizin (directory)”, Windows işetim sisteminde ise “klasör (folder)” olarak adlandırılır. Tüm bu birbiri içerisine geçmiş klasörler hiyerarşik bir yapı oluştururlar. Bu yapıyı “dizin ağacı (tree)” olarak adlandırıyoruz.
+            </p> 
+
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/tree.png">
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p>
+                Sanırım konu biraz anlaşıldı. Dosyalarımızın erişim yolunu (PATH) yazarken bu hiyerarşiyi kullanırız. Örneğin Folder6 klasörü içerisinde bulunan “style.css” dosyamızın yolu bu durumda;
+            </p>
+            <p class="code ms-3">\Folder3\Folder6\style.css</p>
+            <p>şeklindedir.</p>
+            
+            <p>
+                Peki bu durum HTML’de web sayfası düzenlerken nasıldır?
+            </p>
+            
+            <p>
+                Aslında arada çok fark bulunmuyor. Yapacağımız tek şey “\” karakterini “/” ile değiştirmekten ibaret. Yani bu dosyayı web sayfamıza taşırken erişim yolunu (Path) şu şekilde yazıyoruz.
+            </p>
+            <p class="code ms-3">/Folder3/Folder6/style.css</p>
+            <p>
+                Şimdi devam edelim. Tabii ki bu yol tarifi yalnızca sizin bilgisayarınıza ve o anki duruma özgü. Dolayısıyla düzenlediğiniz web sayfasını veya çalışmanızın içerisinde bulunduğu klasörü  başka bir bilgisayara ya da başka bir klasöre taşıdığınızda yine çalışmayacak, dosyalar yazdığınız adreste bulunamayacaktır. Çünkü oradan kaldırıp başka adrese taşıdınız. Doğal olarak ta erişim yolu (path) değişti.
+            </p>
+            <p>
+                Peki o halde ne yapacağız? Bu engeli aşmanın bir yolu var mı?
+            </p>
+            <p>
+                Evet var. Yol tarifimize kök dizinden (root) değil de bulunduğumuz klasörden başlamak. Öyle bir yol tarifi ki, içerisinde çalıştığımız klasörü hangi bilgisayara ya da hangi disk veya klasöre taşırsak taşıyalım, HTML sayfamız içerisinde tanımladığımız yollar istediğimiz dosyaları bulacak ve sistem tıkır tıkır çalışacak.
+            </p>
+            <p>
+                Klasör yapımızdan ve bu klasörler arasındaki hiyerarşiden bahsetmiştik. Bir klasör veya dosya adını herhangi bir yol tanımlamadan kullandığımızda, bilgisayarımız o dosya veya klasörü geçerli dizin (klasör) içerisinde arar. Yani “index.html” isimli bir dosyamız var ve bu dosya içerisine biz
+            </p>
+            <p class="code ms-3">&lt;img src=”logo.png”/&gt;</p>
+            <p>
+                tagı ile bir resim yerleştirdik. (Dikkat ederseniz osya adını herhangi bir yol tanımlaması yapmadan kullandım. Böyle bir durumda bilgisayar, “logo.png” adındaki resim dosyamı geçerli klasör, yani “index.html” dosyamın bulunduğu klasör içerisinde arayacaktır. Bulursa görüntüleyecek, bulamazsa doğal olarak görüntüleyemeyecek. Ama bizim dosyamız, “index.html” dosyamızın, yani web sayfamızın bulunduğu klasör içerisinde oluşturulmuş “img” klasörü içerisinde. Ve bulamadı. O halde yol tarifimizi
+            </p>
+            <p class="code ms-3">&lt;img src=”img/logo.png”/&gt;</p>
+            <p>
+                olarak yapıyoruz. Dikkat ettiyseniz dosya yolu yazarlen başlangıçta “/” kullanmadım. Çünkü başlangıçta kullanılan “/”, kök dizini sembolize eder ve aramanın kök dizinden başlayacağını belirtir. Halbuki ben bilgisayarın dosyamı aramaya kök dizinden (root) değil, içerisinde bulunduğum klasörden başlamasını istiyorum. Bu nedenle de yol tanımıma “/” ile değil de, doğrudan “logo.png” dosyamın içerisinde bulunduğu “img” klasörünün adını yazarak başladım. Peki “index.html” dosyama CSS adında başka bir klasörde bulunan “style.css” dosyasını eklemek isteseydim? Tabiki
+            </p>
+            <p class="code ms-3">&lt;style type=”text/css” rel=”CSS/style.css”&gt;&lt;/style&gt;</p>
+            <p>
+                Şeklinde yazmam gerekecekti. Yol tarifinde kullanılan bir diğer yöntemimiz ise “..”. “../” ile başlayan bir yol tarifi, bilgisayarımızın aramaya geçerli dizin/klasörden bir önceki klasörden başlamasını sağlar. Bu işlemi geriye gitmek istediğiniz klasör sayısı kadar çoğaltabiliriz. 
+            </p>
+            <p class="code ms-3">../style.css</p>
+            <p class="code ms-3">../../CSS/style.css</p>
+        </div>
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/nav_bar.js"></script>
+</body>
+</html>
+
