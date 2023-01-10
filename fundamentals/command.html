@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+
+        .cdiv{
+            background-color:darkslategray;
+            border-radius: 1rem;
+            margin: 1em;
+        }
+
+        .code{
+            color: gainsboro;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+   <div id="nav-menu"></div> 
+    
+    <section class="container pt-3">
+        <div>
+            <p class="h4 font-weight-bold mb-4" style="color: orange;">Konsol Ekranını Kullanma</p>            
+        </div>
+
+        <div>
+            <p>
+                Konsol ekranı, bizim işletim sistemiyle iletişim kurmamızı sağlayan, işletim sistemimize komutlar vermemizi ve verdiğimiz komutların sonuçlarını görebilmemizi sağlayan siyah beyaz bir sistem aracıdır. Bir zamanlar, işletim sistemlerinin henüz grafik arayüzler kullanmadığı, bilgisayar ekranlarının bu kadar renkli olmadığı yıllarda insanlar bilgisayar üzerindeki her türlü iş ve işlemini bu ekran üzerinden yapıyorlardı.
+            </p> 
+            <p>
+                Bu gün artık çok ihtiyaç duyulmuyor. Hatta neredeyse hiç.  Hatta o kadar ki, çok uzun süredir bilgisayar kullanan, hatta zamanının büyük bölümünü bilgisayar başında geçirenlerin büyük bir kısmı böyle bir şeyin varlığından bile sanırım habersiz. Ama bir yazılımcı için hayati öneme sahip. Bu nedenle böyle bir başlık açtım ve ihtiyaç duyabileceğiniz asgari düzeyde bilgiyi çok ta zamanınızı çalmadan vermek istedim. Bu ekran üzerinde yapacağımız dosya ve dizin işlemleri aynı zamanda bilgisayarlardaki dosya ve klasör yapısını, ve bu dosya ve klasörlere ihtiyaç duyduğunuzda yazılımlarımızdan nasıl erişebileceğimizi daha iyi anlamanızı sağlayacaktır.
+            </p>
+            <p>
+                Windows İşletim sisteminde konsol ekranına “Komot İstemi (Commannd Prompt)” adı verilir ve kısaca “cmd” olarak bilinir. Açmak için başlat menusu arama kutusuna “cmd”, “komut istemi”, “command”, “command prompt” ifadelerinden birini yazdığınızda gelen simgeye tıklayabilir, ya da başlat menusune sağ tıkladığınızda gelen menuden “komut istemi (command prompt) veya windows 11 kullanıyorsanız “terminal” seçeneğini seçebilirsiniz.
+            </p>
+            
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/console.png">
+            </div>
+            <p>
+                Konsol ekranında satırın ilk başında “prompt” adı verilen ve bilgisayarımızın komut almaya hazır olduğunu belirten işaret bulunur. Sonrasında yanıp sönen dikey çizgiye ise “cursor” adı verilir. Promp üzerinde bilgisayarınızın o an içerisinde bulunduğunuz klasörün (directory) yolu (path) yazılıdır. “>” işareti ise bilgisayarınızın vereceğiniz komuta hazır olduğunu gösterir.
+            </p>
+            <p>
+                Komutu yazıp “enter” tuşuna bastığınızda işletim sisteminiz verdiğimiz komutu uygulamaya başlar ve bitiminde duruma göre ya bir mesaj yayınlayarak ya da hiçbir mesaj vermeden bir alt satıra geçer ve promt yeniden satır başında görünür. Komut ortamında, “enter” tuşuyla bir alt satıra indikten sonra yeniden bir üst satıra çıkmaya izin verilmez.
+            </p>
+        </div> 
+
+        <div>
+            <p style="color: orange; font-weight: bold;">DOSYA ve DİZİN İŞLEMLERİ</p>
+            <p>
+                <b class="text-info">dir :</b> Bulunduğunuz dizin içerisindeki dosya ve dizinleri listelemenizi sağlar. /a parametresi ile birlikte kullanırsanız (dir /a), gizli dosya ve klasörleri de görebilir, /s parametresiyle kullanırsanız (dir /s) alt klasörlerde bulunan dosya ve dizinleri de listeleyebilirsiniz.
+            </p> 
+            <p>
+                Listede karşısında &lt;DIR&gt; yazılı olanlar dizin (klasör), diğerleri dosyalardır.
+            </p> 
+
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/cmd1.png">
+            </div>
+            <p>
+                Komut ortamında kullanacağınız her komutun farklı parametreleri vardır. Bu parametreler komutun farklı kullanım şekillerini gösterir. Bu parametreleri ve neler yapabildiğini görmek için /? parametresi kullanılır.
+            </p>
+            <p class="code">Dir /?</p>
+        </div>
+
+        <div>      
+            <p>
+                <b class="text-info">tree :</b> Bulunduğunuz klasörün alt klasörlerini bir dizin ağacı şeklinde görmenizi sağlar.
+            </p>
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/cmd2.png">
+            </div>
+            <p>
+                <b class="text-info">del :</b> Bulunduğunuz klasörün alt klasörlerini bir dizin ağacı şeklinde görmenizi sağlar.
+            </p>
+            <p class="code">del resim.jpg</p>
+            <p>
+                <i><b>Not: </b> Komut ekranında klavyenizin yukarı-aşağı tuşlarını kullanarak daha önce yazdığınız komutları görebilir, ileri geri komutlar arasında gezebilir ve istediğiniz komutu tekrar komut satırına getirebilirsiniz.</i>
+            </p>
+        </div>
+
+        <div>
+            <p style="color: orange; font-weight: bold;">DİZİN İŞLEMLERİ</p>
+            <p>
+                Burası bizim için önemli olan kısım. Komut ortamında klasör oluşturmak, silmek ve klasörler arasında geçiş yapmak için kullandığımız üç temel komutumuz var. MD (klasör oluşturmak), RD (klasör silmek) ve CD (klasörler arasında dolaşmak).
+            </p>
+            <p>
+                Şimdi gelin birlikte biraz alıştırma yapıp konuyu iyice pekiştirelim.
+            </p>
+            <p>
+                Konsol uygulamasını (Komut istemi) açıp gelen pencereye ilk olarak şu ifadeyi yazıp enter tuşuna basıyoruz.
+            </p>
+            <p class="code">cd \</p>
+            <p>
+                Bu komut hard diskimizin kok dizinine, yani başlangıç dizinide götürecek bizi. Üzerinde çalışacağımız dizini burada oluşturacağız. Eğer bir flashdiskiniz varsa onu kullanmanız daha uygun olacaktır. Bunu yapmak için önce flashdiskinizi bilgisayarınıza taktıktan sonra masaüstünüzdeki “Bilgisayarım” simgesine tıklayarak fkashdiskimizin isminin sonunda yer alan harfi öğrenmemiz gerekiyor.
+            </p>
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/cmd3.png">
+            </div>
+
+            <p>
+                Diskimize atanan harfi öğrendikten sonra artık komut istemcimizden bu diske geçiş yapabiliriz. Bunun için
+            </p>
+            <p class="code">F:</p>
+            <p>
+                Yazıp enter tuşuna basmamız yeterli. Promptunuz değişecek ve F:\> şekline dönüşecek. Artık flash diskimiz içerisindeyiz.
+            </p>
+            <p>
+                <i><b>Not: </b>Window’ta diskin bağlı olduğu her sürücüye (drive) bir harf atanır. Ve sürücü olduğunu belirtmek için : kullanılır. Komut ortamımıza diskimizin bulunduğu sürücü harfini yazıp : koyduktan sonra enter tuşuna basmak suretiyle sürücüler arasında gezinebiliriz.</i>
+            </p>
+
+            <p>
+                Diskimiz üzerinde bir klasör oluşturalım.
+            </p>
+            <p class="code">md Erdogan</p>
+
+            <p>
+                Sonrasında dir komutu ile diskimizin listesini alıp komtrol edebiliriz.
+            </p>
+
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/cmd4.png">
+            </div>
+
+            <p>
+                Oluşturduğumuz bu dizin içerisine gitmek için CD komutunu kullanıyoruz.
+            </p>
+            <p class="code">cd erdogan</p>
+            <p>
+                Prompumuzun nasıl değiştiğine dikkat edin. İçerisinde bulunduğunuz disk ve klasör yol olarak görüntüleniyor (path).
+            </p>
+            <p>
+                Şimdi iki dizin daha oluşturalım.
+            </p>
+            <p class="code">md dizin1</p>
+            <p class="code">md dizin2</p>
+            <p>
+                Ve oluşturduğumuz dizin2 klasörüne gidelim. Sonra burada bir dizin daha oluşturalım.
+            </p>
+            <p class="code">cd dizin2</p>
+            <p class="code">md dizin21</p>
+            <p class="code">cd dizin21</p>
+            <p>
+                Bir önceki dizine dönmek için 
+            </p>
+            <p class="code">cd ..</p>
+            <p>komutunu kullanıyoruz.</p>
+            <p class="code">cd \</p>
+            <p>komutunu kullandığımızda ise diskimizin (yani flashdiskimizin) kök dizinine döneriz.</p>
+            <p class="code">tree</p>
+            <p>
+                Komutunu kullanarak oluşturduğumuz dizinlerin hiyerarşik yapısını bir dizin ağacı şeklinde görebiliriz.
+            </p>
+            <div class="row col-lg-9 justify-content-center p-4">
+                <img src="../img/cmd5.png">
+            </div>
+
+            <p>
+                Herhangi bir dizine doğrudan gitmek için cd (yol) komutunu kullanabiliriz.
+            </p>
+            <p class="code">cd F:\erdogan\dizin2\dizin21</p>
+            <p>
+                veya hedef dizinimiz aynı diskte olduğu için
+            </p>
+            <p class="code">cd \erdogan\dizin2\dizin21</p>
+            <p>
+                Hatta şu an kök dizinde olduğumuz ve erdogan klasörü de bu dizin içerisinde olduğu için (dir komutunu verdiğimizde listede görebiliyorsak)
+            </p>
+            <p class="code">cd erdogan\dizin2\dizin21</p>
+            <p>
+                <b class="text-info">RD </b>komutu ise dizinleri silmek için kullanılır. Burada dikkat edilmesi gereken şey sadece işi boş olan dizinleri bu komutla silebileceğimiz. Bir dizini silebilmemiz için içini boşaltmamız gerekiyor.
+            </p>
+            <p class="code">cd ..</p>
+            <p class="code">rd dizin21</p>
+            <p>eğer ekranınız çok kalabalık görünmeye başladığı için sinirinizi bozuyorsa temizlemek için</p>
+            <p class="code">cls</p>
+            <p>komutu işinizi görecektir.</p>
+            <p>
+                Konuyu daha da pekiştirmek için biraz daha uygulama yapıp dizin ve yol kavramlarını hazmetmeye çalışabilirsiniz. Komut isteminde kullanabileceğiniz diğer komutlara küçük bir google aramasıyla ulaşmanız da mümkün.
+            </p>
+
+        </div>
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/nav_bar.js"></script>
+</body>
+</html>
+
