@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Navigation Bar</title>
+        <style>
+            body{
+                color: white;                
+            }
+
+            input{
+                height: 2rem;
+            }
+
+           .container{
+            width: 75%;
+            margin-left: 15%;
+            margin-top: 100px;
+           } 
+
+           .warning{
+            margin-left: 1rem;
+            color:red;
+           }
+        </style>
+	</head>
+
+	<body style="background:#020312">
+		<script src="navbar.js"></script>
+        <script src="sign.js"></script>
+        
+        <div class="container">
+            <div id="signup" style="display: none">
+                <p><h1>Kullanıcı Kayıt Formu</h1></p> 
+                <div style="display:grid; grid-template-columns: 150px 200px 300px;">
+                    <p>Kullanıcı Adı</p>
+                    <input id="username" type="text" name="username">
+                    <p id="w-username" class="warning"></p>
+
+                    <p>Adı</p>
+                    <input id="name" type="text" name="name">
+                    <p id="w-name" class="warning"></p>
+
+                    <p>Soyadı</p>
+                    <input id="surname" type="text" name="surname"> 
+                    <p id="w-surname" class="warning"></p>
+
+                    <p>Email Adresi</p>
+                    <input id="mail" type="email" name="mail"> 
+                    <p id="w-mail" class="warning"></p>
+
+                    <p>Şifre</p>
+                    <input id="password" type="password" name="password">
+                    <p id="w-pwd" class="warning"></p>
+
+                    <p>Şifre (Tekrar)</p>
+                    <input id="verify" type="password" name="verify">
+                    <p></p>
+
+                    <p></p>
+                    <p style="width:100%; text-align: right">
+                        <input type="button" value="Kaydol" onclick="signup()">
+                    </p>                
+                </div>
+            </div>
+
+            <div id="login" style="display:none">
+                <div style="display:grid; grid-template-columns: 150px 200px 200px;">
+                    <p>Kullanıcı Adı</p>
+                    <input id="userName" type="text" name="userName">
+                    <p class="warning"></p>
+
+                    <p>Şifre</p>
+                    <input id="passwd" type="password" name="passwd">
+                    <p class="warning"></p>
+
+                    <p></p>
+                    <p style="width:100%; text-align: right">
+                        <input type="button" value="Giriş" onclick="sign()">
+                    </p>                
+                </div>
+            </div>
+
+            <div id="success" style="width: 50%; display: none">
+                <p>Kayıt İşleminiz Başarı ile gerçekleştirildi. Aşağıdaki butona basarak giriş yapabilirsiniz.</p>
+                <p style="width:100%; text-align: right"><input type="button" value="Giriş" onclick="login()"></p>
+            </div>
+
+            <div id="logged" style="width: 100%; display: none">
+                <p>Sayın <span id="_name"></span>. Hoşgeldiniz.</p> 
+                <p>Sistemde kayıtlı eposta adresiniz : <span id="_mail"></span></p>
+            </div>
+
+            <div id="not-logged" style="width: 100%;">
+                <p>Hoşgeldiniz.</p> 
+                <p>Lütfen üst menudeki "Giriş"" butonunu kullanarak sisteme giriş yapınız. Eğer kullanıcı kaydınız yoksa "Kaydol" butonuna tıklayarak kullanıcı kaydınızı oluşturabilirsiniz.</p>
+            </div>
+        </div>
+	</body>
+</html>
