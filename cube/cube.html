@@ -70,6 +70,7 @@
 
 			function opac(){
 				let faces = document.querySelectorAll(".face");
+				if(document.getElementById("opac").value > 100) document.getElementById("opac").value = 100;
 
 				faces.forEach(element => {
 					element.style.opacity = document.getElementById("opac").value / 100;
