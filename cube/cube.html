@@ -28,6 +28,10 @@
 
 			<div style="margin-left: 1em;">Opacity : </div>
 			<input id="opac" type="text" size="3" maxlength="3" value="50" onblur="opac()">
+			
+			<div style="margin-left: 1em;">Perspective : </div>
+			<input id="pers" type="text" size="3" maxlength="5" value="3000" onblur="perspect()">
+			<span> px </span>
 		</div>
 		<div class="cube-base">
 			<div id="cube" class="cube" draggable="true" ondragstart="rotate(event)">
@@ -70,6 +74,12 @@
 				faces.forEach(element => {
 					element.style.opacity = document.getElementById("opac").value / 100;
 				})
+			}
+			
+			function perspect(){
+				let pers = document.getElementById("pers").value;
+
+				document.querySelector(".cube-base").style.perspective = pers + "px";
 			}
 		</script>
 	</body>
