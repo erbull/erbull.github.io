@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erdoğan Bülbül</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+
+    <style>
+        section img{
+            opacity: 0.8;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .madde{
+            padding-left: 2rem;
+        }
+
+        .madde:before{
+            color: gray;
+            content : "■ "
+        }
+
+        .cdiv{
+            background-color:darkslategray;
+            border-radius: 1rem;
+            margin: 1em;
+        }
+
+        .code{
+            color: gainsboro;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+
+<body class="text-light">
+    <!--Header Menu-->
+    <div id="nav-menu"></div>
+    
+    <section class="container pt-3">
+        <div class="pt-3">
+            <p class="h3 font-weight-bold text-center mb-0" style="color: orange;">JavaScript</p> 
+            <p class="h5 font-weight-bold text-center mb-4 mt-0" style="color: orange;">(HELLO WORLD)</p>
+        </div>
+
+        <div> 
+            <p class="h4 font-weight-bold mb-4" style="color: orange;">Başlarken</p>
+            <p>
+                HTML, JavaScript, CSS gibi diller "betik diller" gurubunda yer alırlar ve doğrudan işletim sistemi üzerinde çalışmazlar. 3.party yazılımlara ihtiyaç duyarlar (internet tarayıcısı, JavaVM – Java Virtual Mavhine) gibi. Bu, kodlarımızı ancak bu programlar üzerinde çalıştırabileceğimiz anlamına gelir. Bu nedenle JavaScriptte yazdığımız kodaları  internet tarayıcımız üzerinde çalıştırmak zorundayız ve bunun için de bir web sayfasıına ihtiyacımız olacak. Bir web sayfasının nasıl oluşturalacağını öğrenmek için HTML bölümümüzü takip edebilirsiniz. 
+            </p>
+            <p>
+                O halde bir web sayfasına Javascript kodlarımızı nasıl ekleyeceğimizi öğrenerek başlayalım.
+            </p>    
+        </div>
+
+        <div class="row align-items-center">
+            <p style="color: orange; font-weight: bold;">&lt;script&gt; etiketi</p>
+            <p>
+                JavaScript kodlarımızı bir HTML sayfasına eklemek için kullanabileceğimiz iki yöntem var.
+            </p>
+            <p class="madde">
+                Doğrudan &lt;script&gt; …… &lt;/script&gt; tagları arasına yazmak,
+            </p>
+            <p class="madde">
+                Harici bir script dosyası içerisine yazmak ve bu dosyayı HTML sayfamız içerisine eklemleyerek çalışmasını sağlamak.
+            </p>
+            <p>
+                Javascript programları html içerisine &lt;script&gt; etiketi ile eklenebilir. Örneğin:
+            </p>
+            <p class="code">
+                &lt;!DOCTYPE HTML&gt;<br/>
+                &lt;html&gt;<br/>
+                &emsp; &lt;body&gt;<br/>
+                &emsp;&emsp; &lt;p&gt;Javascript Kodundan önce...&lt;/p&gt;<br/>
+                &emsp;&emsp; &lt;script&gt;<br/>
+                &emsp;&emsp;&emsp; alert( 'Hello, world!' );<br/>
+                &emsp;&emsp; &lt;/script&gt;<br/>
+                &emsp;&emsp; &lt;p&gt;...Javascript kodundan sonra.&lt;/p&gt;<br/>
+                &emsp; &lt;/body&gt;<br/>
+                &lt;/html&gt;
+            </p>
+            <p>
+                &lt;script&gt; etiketi içerisine yazdığınız JavaScript komutu tarayıcı o koda geldiğinde doğrudan okunur.
+            </p> 
+        </div>
+
+        <div class="row align-items-center">
+            <p style="color: orange; font-weight: bold;">Dışardan yüklenen Javascript kod dosyaları</p>
+            <p>
+                Eğer çok fazla JavaScript kodunuz varsa bunları ayrı bir dosya içerisine yazıp uzantısı .js olacak şekide kaydedebilir ve sonrasında bu dosyayı aşağıdaki gibi yol göstererek sayfanızda çalıştırılmasını sağlayabilirsiniz.
+            </p>
+
+            <p class="code">
+                &lt;!DOCTYPE HTML&gt;<br/>
+                &lt;html&gt;<br/>
+                &emsp; &lt;body&gt;<br/>
+                &emsp;&emsp; &lt;script src="script.js"&gt; &lt;/script&gt;<br/>
+                &emsp; &lt;/body&gt;<br/>
+                &lt;/html&gt;                
+            </p>
+            <p class="text-info font-weight: bold">
+                Dikkate değer:
+            </p> 
+            <p>
+                Kural olarak en basit JavaScript kodları doğrudan HTML içerisine yazılır. Daha karmaşık olanlar farklı dosyalarda taşınır. Dikkat edilmesi gereken şey, src parametresi kullanarak oluşturduğunuz &lt;script src=”script.js&gt;&lt;/script&gt; tagları arasına yerleştireceğiniz kodlarınızın çalışmayacak olmasıdır. Örneğin aşağıdaki kod bloğu çalışmayacaktır:
+            </p>
+            <p class="code">
+                &lt;!DOCTYPE HTML&gt;<br/>
+                &lt;html&gt;<br/>
+                &emsp; &lt;body&gt;<br/>
+                &emsp;&emsp; &lt;script src="script.js"&gt;<br/>
+                &emsp;&emsp;&emsp; alert(1); // İçerik görmezden gelinecektir çünkü "src" tagı kullanılmıştır.<br/>
+                &emsp;&emsp; &lt;/script&gt;<br/>
+                &emsp; &lt;/body&gt;<br/>
+                &lt;/html&gt;                
+            </p>
+            <p>
+                Böyle bir durumda sayfa içerisinde başka kodlar kullanma ihtiyacı oluşursa yeni bir &lt;script&gt; tagı açılmalıdır. Yani doğru yazım şekli aşağıdaki gibi olmalıdır.
+            </p>
+            <p class="code">
+                &lt;!DOCTYPE HTML&gt;<br/>
+                &lt;html&gt;<br/>
+                &emsp; &lt;body&gt;<br/>
+                &emsp;&emsp; &lt;script src="script.js"&gt; &lt;/script&gt;<br/>
+                &emsp;&emsp; &lt;script&gt;<br/>
+                &emsp;&emsp;&emsp; alert(1);<br/>
+                &emsp;&emsp; &lt;/script&gt;<br/>
+                &emsp; &lt;/body&gt;<br/>
+                &lt;/html&gt;                
+            </p>
+        </div>
+
+        <div style="height:25vh"></div>
+    </section>
+    
+    <div class="last-text fixed-bottom">
+        Developed by Erdoğan Bülbül @ 2022
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/nav_bar.js"></script>
+</body>
+</html>
+
