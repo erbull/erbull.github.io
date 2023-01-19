@@ -4,6 +4,9 @@ let cube = document.querySelector(".cube");
 
 cubeSize();
 cube.style.transform = "rotateX(" + rotX + "deg) rotateY(" + rotY + "deg) rotateZ(" + rotZ + "deg)";
+document.getElementById("x").value = rotX;
+document.getElementById("y").value = rotY;
+document.getElementById("z").value = rotZ;
 
 function cubeSize(){
     let size = document.getElementById("size").value;
