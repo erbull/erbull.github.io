@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="tr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="calculator.css">
+	</head>
+
+	<body>
+		<div class="rss">
+            <div id="titlebar" style="display:flex; width:100%; height:8%; margin-inline: auto; align-items: center; justify-content: space-between;"  onmouseover="changeCursor()" onmouseleave="cursorDefault()">
+                <div style = "height:30%; width:20%; display: flex; margin-left: 5px;"><div class="bulet"></div><div class="bulet"></div><div class="bulet"></div></div>
+                <div>Calculator</div>
+                <div style = "height:100%; width:20%; margin-right:3px; text-align: right;">X</div>
+            </div>
+            
+            <div class="screen">
+                <div style="display:flex; justify-content: space-between;">
+                    <div><span style="font-size: 0.6rem; font-weight: bold; margin-left: 3px;">M </span><span id="M"></span></div>
+                    <p id="sum">0</p>
+                </div>
+                <div id="calc"><p id="str">0</p></div>
+            </div>
+            <div class="grid">
+                <div><span>MC</span></div> <div><span>M+</span></div> <div><span>M-</span></div> <div><span>MR</span></div>
+                <div><span>CE</span></div> <div><span>C</span></div> <div><span>/</span></div> <div><span>x</span></div>
+                <div><span>7</span></div> <div><span>8</span></div> <div><span>9</span></div> <div><span>+</span></div>
+                <div><span>4</span></div> <div><span>5</span></div> <div><span>6</span></div> <div><span>-</span></div>
+                <div><span>1</span></div> <div><span>2</span></div> <div><span>3</span></div> <div style="height:calc(200% + 7px)"><span>=</span></div>
+                <div><span>+-</span></div> <div><span>0</span></div> <div><span>.</span></div> 
+            </div> 
+        </div>
+
+        <script src="calculator.js"></script>
+	</body>
+</html>
