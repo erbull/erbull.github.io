@@ -1,8 +1,6 @@
-let posX = 0, posY = 0, startPosX = 0, startPosY = 0;
-let keys = document.querySelectorAll(".grid div");
-let bar = document.querySelector("#titlebar");
 let _number = "", _sum = 0, _op = "", m = null; 
 
+let keys = document.querySelectorAll(".grid div");
 keys.forEach(function(element, index) {
     element.addEventListener('mousedown', function(e){
         e.preventDefault();
@@ -12,7 +10,7 @@ keys.forEach(function(element, index) {
             this.classList.remove("active");
         });
 
-        strWrite(element.children[0].innerHTML);
+        strWrite(element.innerHTML);
     });
 });
 
@@ -116,6 +114,9 @@ function calculate(){
     }
 }
 
+let startPosX = 0, startPosY = 0;
+let bar = document.querySelector("#titlebar");
+
 bar.addEventListener('mousedown', function(e){
     e.preventDefault();
 
@@ -129,6 +130,7 @@ bar.addEventListener('mousedown', function(e){
 });
 
 function mouseMove(e) {
+    let posX = 0, posY = 0;
     let rss = document.querySelector(".rss");
 
     posX = startPosX - e.clientX;
@@ -139,12 +141,4 @@ function mouseMove(e) {
 
     rss.style.top = (rss.offsetTop - posY) + "px";
     rss.style.left = (rss.offsetLeft - posX) + "px";
-}
-
-function changeCursor(){
-    document.body.style.cursor = "move";
-}
-
-function cursorDefault(){
-    document.body.style.cursor = "auto";
 }
