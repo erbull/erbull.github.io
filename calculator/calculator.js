@@ -116,7 +116,7 @@ function calculate(){
 
 let startPosX = 0, startPosY = 0;
 let bar = document.querySelector("#titlebar");
-bar.style.corsor = "move";
+bar.style.cursor = "move";
 
 bar.addEventListener('mousedown', function(e){
     e.preventDefault();
