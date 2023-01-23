@@ -1,7 +1,7 @@
 let _number = "", _sum = 0, _op = "", m = null; 
 
 let keys = document.querySelectorAll(".grid div");
-keys.forEach(function(element, index) {
+keys.forEach(function(element) {
     element.addEventListener('mousedown', function(e){
         e.preventDefault();
         this.classList.add("active");
@@ -116,6 +116,7 @@ function calculate(){
 
 let startPosX = 0, startPosY = 0;
 let bar = document.querySelector("#titlebar");
+bar.style.corsor = "move";
 
 bar.addEventListener('mousedown', function(e){
     e.preventDefault();
