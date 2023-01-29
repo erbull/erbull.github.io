@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        p::first-letter{
+            font-size: 1.2rem;
+        }
+        p:not(.code){
+            text-indent: 30px;
+        }
+        .govde{
+            width: 80%;
+            margin-inline: auto;
+        }
+        .container{
+            display:grid;
+            grid-template-columns: 300px 300px 300px;
+            gap: 5px;
+        }
+        .container div{
+            width: calc(100% - 10px);
+            height: 60px;
+            background-color: black;
+            color:white;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .code{
+            margin-left: 2em;
+            padding: 10px;
+            width: 400px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: darkseagreen;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container govde">
+        <div id="c_person">Bir person nesnesi oluştur</div>
+        <div id="w_person">Person nesnesine bir değer ata</div>
+        <div id="r_person">Person nesnesinden bir değer oku</div>
+        <div id="c_erkek">Bir erkek nesnesi oluştur</div>
+        <div id="w_erkek">Erkek nesnesine bir değer ata</div>
+        <div id="r_erkek">Erkek nesnesinden bir değer oku</div>
+        <div id="c_kadin">Bir kadın nesnesi oluştur</div>
+        <div id="w_kadin">Kadın nesnesine bir değer ata</div>
+        <div id="r_kadin">Kadın nesnesinden bir değer oku</div>
+    </div>
+    <div class="govde">
+        <div style = "font-size:1.5rem; font-weight:700; margin: 30px;">
+            Delege (delegate) nedir? Ne işe yarar? (get ve set metodları)
+        </div>
+        <p>
+            Daha önece hiçbir val kaymakam, müsteşar, bakan odası gördünüz mü bilmiyorum. Görenler mutlaka beni iyi anlayacaktır.
+        </p>
+        <p>
+            Odanın girişi üstüste iki, hatta belki üç kapıdan oluşur. Eee, büyük, önemli adamlar. Ve önemli bir oda. Her önüne gelenin elini kulonu sallaya sallaya girebileceği bir yer değil. Dingonun ahırı mı orası?
+        </p>
+        <p>
+            Odanın girişinde bir sekreter, ya da özel kalem dediğimiz bir vatandaş oturur. Odaya giren çıkan herşeyi, herkesi kontrol eder. Onun denetiminden geçmeden odaya ne kimse girebilir, ne de odadan bir şey çıkar.
+        </p>
+        <p>
+            İşte delege (delegate) dediğimiz şey bunun bilgisayara uyarlanmış, nesneye dönüştürülmüş hali. Bir class’ımız var, ve bu clas içerisinde kontrol altında tutmak istediğimiz bir özelliğimiz (değişkenimiz) var. Bizim iznimiz veya haberimiz olmadan bu değişkene değer yüklenmesini veya içerisindeki değerin okunmasını istemiyoruz.
+        </p>
+        <p class="code">
+            class bakanlik{<br/>&emsp;bakan;<br/>}                
+        </p>
+        <p>
+            Classımızı oluşturduk. Bakanımız da hazır. Şimdi sıra geldi makam odasını hazırlamaya. Öncelikle bu vatandaşa bir kapı yapmamız lazım. Öyle her önüne gelen girip çıkamasın. Yani değişkenimizi private hale getiriyoruz.
+        </p>
+        <p class="code">
+            class bakanlik{<br/>&emsp;#bakan;<br/>}                
+        </p>
+        <p>
+            İşte oldu. Baya sağlam bir kapı. Hem de üst üste 4 tane. Artık buraya bakanlık elemanlarından başka kimse girip çıkamaz. Eeee? Peki nasıl irtibat kuracak bu vatandaş class (bakanlık) dışındaki elemanlarla, yani halkla? Cevap basit. Bu adama bir, hatta iki sekreter lazım. Birisi odaya girenleri (set) diğeri de odadan çıkanları kontrol edecekler. Get ve set adında iki fonksiyon.
+        </p>
+        <p class="code">
+            class bakanlik{<br/>&emsp;#bakan;<br/>&emsp;get sekreter(){<br/>&emsp;&emsp;return this.bakan;<br/>&emsp;}<br/>}                
+        </p>
+        <p>
+            Gördüğünüz gibi. Bakan değil ana, sekreter ulaşılabilir. Yani bakandan bir talebimiz varsa, yani bakan değişkeninin içerisindeki veriyi almak istiyorsak artı bunu sekreterden talep edebiliriz. O bakanlik classı içerisinde olduğu için bu veriye ulaşabilir. Biz de ondan alabiliriz. Tabi sekreterin bu bilgiye vermeden önce (return bakan;) yapmasını istediğimiz işlemler varsa onları da bu fonksiyon (scop) içerisinde sıralamamız mümkün.
+        </p>
+        <p class="code">
+            let a = bakanlik.sekreter;
+        </p>
+        <p>
+            Odadan çıkacak veri tamam. Peki odaya girenler?
+        </p>
+        <p class="code">
+            class bakanlik{<br/>&emsp;#bakan;<br/>
+            &emsp;get sekreter();{<br/>&emsp;&emsp;return this.bakan;<br/>&emsp;}<br/>
+            &emsp;set sekreter(gelen){<br/>&emsp;&emsp;this.bakan = gelen;<br/>&emsp;}<br/>}<br/>
+            bakanlik.sekreter = “Merhaba”;                
+        </p>
+        <p>
+            Peki bu bizim ne işimize yarayacak, neden böyle bir şeye ihtiyaç duyduk?
+        </p>
+        <p>
+            Diyelim ki deposunda yüzlerce ürün barındıran ve bu ürünlerin miktarı sürekli değişen büyük ve çok işlek bir süpermarketin stok yönetimi için bir yazılım geliştiriyorsunuz. Sürekli değişen bu kadar ürünü takip etmek, stok miktarı azaldığında ya da bittiğinde haberdar olmak önemlidir. İşte böyle bir durumda depoda tanımladığımız ürünlerin başına bir delege yerleştirerek bu yükü hafifletebilirsiniz. Bu delege depoya giren ve çıkan ürünleri sizin yerinize takip ederek ürün azaldığında veya kalmadığında sizi haberdar edebilir. Aklınıza events (olay) kavramı geldi değil mi? “onclick” “onkeypress”, gibi olay functionları. İşte bu eventlerin hepsi böyle oluşturuluyor. 
+        </p>
+        <p>
+            Konunun daha iyi anlaşılabilmesi için bir script hazırladım. Aşağıdaki linkten bu scripte ulaşabilirsiniz. Ayrıca sayfanın başında yer alan 4 siyah kutucuk ta bu scriptin çalışmasını gösteriyor.
+        </p>
+        <p>Scripti indirmek için <a href = "https://github.com/erbull/Programming/tree/main/get-set">tıklayınız.</a></p>
+    </div>
+    <div style = "height: 100px;"></div>
+    
+    <script src="class.js"></script>
+</body>
+</html>
