@@ -51,7 +51,7 @@ var r_kadin = document.querySelector("#r_kadin");
 //kisi adında bir person nesnesi oluşturuyoruz. Class içerisindeki constructor() metodu çağırmadığımız halde otomatik olarak çalışır.
 var kisi = null;
 c_person.addEventListener("click", function(){
-    kisi = new person();
+    if(kisi == null) kisi = new person();
 })
         
 //ikinci kutuya tıkladığımızda person class ı içerisinde tanımladığımız _adi değişkenine (property) değer atıyoruz.
