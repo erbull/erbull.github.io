@@ -249,7 +249,7 @@ function calculator(){
 
     
     document.querySelector("#close").addEventListener("click", function(){
-        document.body.removeChild(rss);
+        rss.style.display == "none";
     });
 }
 
