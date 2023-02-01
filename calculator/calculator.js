@@ -1,7 +1,10 @@
 function openCalculator(){
     let rss = document.querySelector(".rss");
     if (rss == null) calculator();
-    else if (rss.style.display === "none") rss.style.display = "block";
+    else if (rss.style.display === "none"){
+        rss.style.display = "block";
+        rss.focus();
+    }
     else rss.style.display = "none";
 }
 
