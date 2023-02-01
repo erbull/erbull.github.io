@@ -1,8 +1,8 @@
 function openCalculator(){
-    let rss = document.body.querySelector(".rss");
+    let rss = document.querySelector(".rss");
     if (rss == null) calculator();
-    else if (rss.style.display == "none") rss.style.display = "block";
-    else rss.style.display == "none";
+    else if (rss.style.display === "none") rss.style.display = "block";
+    else rss.style.display = "none";
 }
 
 function calculator(){
@@ -249,7 +249,7 @@ function calculator(){
 
     
     document.querySelector("#close").addEventListener("click", function(){
-        rss.style.display == "none";
+        rss.style.display = "none";
     });
 }
 
