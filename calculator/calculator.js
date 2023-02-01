@@ -1,7 +1,8 @@
 function openCalculator(){
-    let isOpen = document.body.querySelector(".rss");
-    if (isOpen == null) calculator();
-    else document.body.removeChild(isOpen);
+    let rss = document.body.querySelector(".rss");
+    if (rss == null) calculator();
+    else if (rss.style.display == "none") rss.style.display = "block";
+    else rss.style.display == "none";
 }
 
 function calculator(){
