@@ -141,6 +141,7 @@ function calculator(){
     
             case "CE":
                     strNumber = "";
+                    strOp = "";
                     sum = 0;
                     spnSum.innerText = "0";
                     divStr.innerText = "0";
