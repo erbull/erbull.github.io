@@ -90,14 +90,14 @@ function calculator(){
     
             keyWrite(el);
         });
-
-        document.addEventListener("keypress", function(e){
-            let key = e.key;
-            if(e.key == "Enter") key = "=";
-            
-            keyWrite(key);
-        });
     })
+    
+    document.addEventListener("keypress", function(e){
+        let key = e.key;
+        if(e.key == "Enter") key = "=";
+            
+        keyWrite(key);
+    });
 
     function keyWrite(key){
         switch(key){
